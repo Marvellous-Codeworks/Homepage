@@ -1,0 +1,29 @@
+beta:
+  label: Beta
+  permalink: /beta
+  description: Beta features and projects
+
+github:
+  label: GitHub
+  permalink: /github
+  description: GitHub
+
+tgd:
+  label: The Great-er Tab Discarder
+  permalink: /tgd
+  description: Updates concerning The Great-er Tab Discarder
+
+mv3:
+  label: Manifest V3
+  permalink: /mv3
+  description: Google Chrome Manifest V3
+
+news:
+  label: News
+  permalink: /news
+  description: News about Marvellous Codeworks (Generic)
+
+tms:
+  label: The Marvellous Suspender
+  permalink: /tms
+  description: Updates concerning The Marvellous Suspender

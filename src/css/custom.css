@@ -1,0 +1,246 @@
+:root {
+  --ifm-color-primary: #0f766e;
+  --ifm-color-primary-dark: #0e6b64;
+  --ifm-color-primary-darker: #0d645e;
+  --ifm-color-primary-darkest: #0b534e;
+  --ifm-color-primary-light: #108175;
+  --ifm-color-primary-lighter: #11887b;
+  --ifm-color-primary-lightest: #13a291;
+  --ifm-background-color: #f8fafc;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #f1f5f9;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+.navbar__title {
+  font-weight: 700;
+}
+
+.navbar-separator {
+  display: inline-block;
+  width: 1px;
+  height: 1.1rem;
+  background: #cbd5e1;
+  margin: 0 0.85rem;
+  vertical-align: middle;
+}
+
+.header-github-link,
+.header-chrome-link {
+  font-size: 0;
+}
+
+.header-github-link::before,
+.header-chrome-link::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-github-link::before {
+  background-image: url('/img/icon-github.svg');
+}
+
+.header-chrome-link::before {
+  background-image: url('/img/icon-chrome-store-2022.svg');
+}
+
+.header-github-link svg[class*='iconExternalLink'],
+.header-chrome-link svg[class*='iconExternalLink'] {
+  display: none;
+}
+
+.header-github-link:hover,
+.header-chrome-link:hover {
+  opacity: 0.75;
+}
+
+.footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Hide external-link icons in footer links only. */
+.footer .footer__link-item svg[class*='iconExternalLink'] {
+  display: none;
+}
+
+/* Make selected blog images span the full viewport width. */
+.full-bleed {
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.full-bleed img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.full-bleed figcaption {
+  margin-top: 0.6rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* Download pages: Chrome Web Store inspired cards */
+.store-download-page {
+  border: 1px solid #d9e4f0;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%);
+  padding: 1.4rem;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.store-hero {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.store-hero-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.store-eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #64748b;
+}
+
+.store-title {
+  margin: 0.15rem 0 0.25rem;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.store-subtitle {
+  margin: 0;
+  color: #334155;
+}
+
+.store-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.store-card {
+  border: 1px solid #d8e2ee;
+  border-radius: 12px;
+  padding: 1.1rem;
+  background: #fbfdff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.store-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.store-card p {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  color: #475569;
+}
+
+.store-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.store-card-primary .button.button--primary {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.store-card-primary {
+  border-color: #74d8c4;
+  background: linear-gradient(180deg, #e8fbf7 0%, #f8fffd 100%);
+  box-shadow: inset 0 0 0 1px rgba(15, 118, 110, 0.1);
+}
+
+.store-card-primary a.button.button--primary,
+.store-card-primary a.button.button--primary:link,
+.store-card-primary a.button.button--primary:visited,
+.store-card-primary a.button.button--primary:hover,
+.store-card-primary a.button.button--primary:active,
+.store-card-primary a.button.button--primary:focus {
+  background: linear-gradient(180deg, #0f766e 0%, #0b5d57 100%) !important;
+  border-color: #0b5d57 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-text-fill-color: #ffffff;
+}
+
+.store-card-primary .button.button--primary:hover {
+  background: linear-gradient(180deg, #13877b 0%, #0f6f67 100%) !important;
+  color: #ffffff !important;
+}
+
+.store-card .button.button--secondary {
+  border-color: #cbd5e1;
+  color: #334155;
+  background: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.store-card .button.button--secondary:hover {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.store-github-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.45rem;
+  flex: 0 0 24px;
+}
+
+.store-chrome-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.45rem;
+  flex: 0 0 24px;
+}
+
+.store-edge-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 0.45rem;
+  flex: 0 0 24px;
+}
+
+.store-note {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px dashed #dbe4ef;
+  color: #475569;
+}
+
+@media (max-width: 996px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+}

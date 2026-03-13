@@ -1,0 +1,20 @@
+gioxx:
+  name: Giovanni Solone
+  title: Former Batman, co-founder of Marvellous Codeworks, dad of Nebula modules
+  url: https://gioxx.org
+  image_url: https://github.com/gioxx.png
+  page: true
+  socials:
+    x: gioxx
+    linkedin: gioxx
+    github: gioxx
+
+rkodey:
+  name: Rob Kodey
+  title: Co-founder of Marvellous Codeworks
+  url: https://kodey.com
+  image_url: https://github.com/rkodey.png
+  page: true
+  socials:
+    linkedin: robkodey
+    github: rkodey
