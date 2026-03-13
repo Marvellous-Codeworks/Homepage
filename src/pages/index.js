@@ -11,7 +11,7 @@ const HERO_SLIDES = [
     subtitle:
       'Helps Chrome, Edge, and Chromium browsers load and run faster by freeing up memory and resources used by inactive or old tabs.',
     ctaPrimary: { label: 'Download TGD', to: '/docs/download#the-great-er-tab-discarder'},
-    ctaSecondary: {label: 'Latest from blog', to: '/blog/tags/tgd'},
+    ctaSecondary: {label: 'Latest from blog', to: '/blog'},
     backgroundImage: '/img/TGD_Mascotte_Crop.jpg',
   },
   {
