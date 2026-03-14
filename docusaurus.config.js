@@ -164,6 +164,10 @@ const config = {
                 label: 'FAQ',
                 href: '/docs/TGD/faq',
               },
+              {
+                label: 'Open an issue',
+                href: 'https://github.com/rkodey/the-great-er-discarder-er/issues/new',
+              },
             ],
           },
           {
@@ -176,6 +180,10 @@ const config = {
               {
                 label: 'FAQ',
                 href: '/docs/TMS/faq',
+              },
+              {
+                label: 'Open an issue',
+                href: 'https://github.com/gioxx/MarvellousSuspender/issues/new',
               },
             ],
           },
