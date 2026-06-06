@@ -1,6 +1,6 @@
-# Marvellous Codeworks Website
+# Marvellous Codeworks KB
 
-This repository contains the official website for **Marvellous Codeworks**, built with [Docusaurus](https://docusaurus.io/).
+This repository contains the official KB for **Marvellous Codeworks**, built with [Docusaurus](https://docusaurus.io/).
 
 The site is the public home for the group's open-source projects, documentation, download pages, FAQs, changelogs, and blog updates. It currently includes content for projects such as **The Marvellous Suspender** and **The Great-er Tab Discarder**.
 
