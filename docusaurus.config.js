@@ -88,6 +88,11 @@ const config = {
         },
         items: [
           {
+            href: 'https://marvellouscode.works',
+            label: 'Home',
+            position: 'left',
+          },
+          {
             type: 'html',
             value: '<span class="navbar-separator" aria-hidden="true"></span>',
             position: 'left',
