@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Marvellous Codeworks',
-  tagline: 'The home of Marvellous Suspender and other wonderful software for you.',
+  tagline: 'Documentation, FAQs, and changelogs for Marvellous Codeworks projects.',
   favicon: 'img/MarvellousCodeworks_Logo.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://www.marvellouscode.works',
+  url: 'https://kb.marvellouscode.works',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -84,6 +84,7 @@ const config = {
         logo: {
           alt: 'Marvellous Codeworks Logo',
           src: 'img/MarvellousCodeworks_Logo.png',
+          href: '/docs/intro',
         },
         items: [
           {
