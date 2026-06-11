@@ -63,14 +63,16 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* ─── GitHub / Chrome Store icon buttons ────────────────── */
+/* ─── GitHub / Chrome Store / RSS icon buttons ───────────── */
 .header-github-link,
-.header-chrome-link {
+.header-chrome-link,
+.header-rss-link {
   font-size: 0;
 }
 
 .header-github-link::before,
-.header-chrome-link::before {
+.header-chrome-link::before,
+.header-rss-link::before {
   content: '';
   display: block;
   width: 22px;
@@ -92,13 +94,23 @@
   background-image: url('/img/icon-chrome-store-2022.svg');
 }
 
+.header-rss-link::before {
+  background-image: url('/img/icon-rss.svg');
+}
+
+[data-theme='dark'] .header-rss-link::before {
+  filter: invert(1);
+}
+
 .header-github-link svg[class*='iconExternalLink'],
-.header-chrome-link svg[class*='iconExternalLink'] {
+.header-chrome-link svg[class*='iconExternalLink'],
+.header-rss-link svg[class*='iconExternalLink'] {
   display: none;
 }
 
 .header-github-link:hover,
-.header-chrome-link:hover {
+.header-chrome-link:hover,
+.header-rss-link:hover {
   opacity: 0.75;
 }
 

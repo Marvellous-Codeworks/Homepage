@@ -117,6 +117,12 @@ const config = {
             position: 'left',
           },
           {
+            href: '/blog/rss.xml',
+            position: 'right',
+            className: 'header-rss-link',
+            'aria-label': 'RSS feed',
+          },
+          {
             href: 'https://github.com/Marvellous-Codeworks',
             position: 'right',
             className: 'header-github-link',
@@ -155,6 +161,14 @@ const config = {
               {
                 label: 'Support',
                 to: '/docs/intro#support-',
+              },
+              {
+                label: 'Blog RSS feed',
+                href: '/blog/rss.xml',
+              },
+              {
+                label: 'Blog Atom feed',
+                href: '/blog/atom.xml',
               },
             ],
           },
