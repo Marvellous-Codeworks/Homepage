@@ -170,6 +170,10 @@ const config = {
                 href: '/docs/TGD/faq',
               },
               {
+                label: 'Discussions',
+                href: 'https://github.com/rkodey/the-great-er-discarder-er/discussions',
+              },
+              {
                 label: 'Open an issue',
                 href: 'https://github.com/rkodey/the-great-er-discarder-er/issues/new',
               },
