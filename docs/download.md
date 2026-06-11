@@ -86,7 +86,7 @@ A single page listing all the extensions available in the stores.
 <div className="store-download-page">
   <section className="store-hero">
     <img
-      src="/img/TMS_icon128.png"
+      src="/img/ic_suspendy_128x128.png"
       alt="The Marvellous Suspender icon"
       className="store-hero-icon"
     />

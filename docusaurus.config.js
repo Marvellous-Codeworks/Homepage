@@ -158,10 +158,6 @@ const config = {
                 to: '/docs/download#the-great-er-tab-discarder',
               },
               {
-                label: 'Changelog',
-                to: '/docs/TGD/changelog',
-              },
-              {
                 label: 'FAQ',
                 href: '/docs/TGD/faq',
               },
