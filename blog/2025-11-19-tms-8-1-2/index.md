@@ -8,8 +8,6 @@ tags: [release, tms]
 
 A maintenance release with a handful of quality-of-life improvements to the session management page, the suspended tab watermark, and the update banner.
 
-<!-- truncate -->
-
 ## What's new and fixed
 
 ### Session export filename includes the date

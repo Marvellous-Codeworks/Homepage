@@ -8,8 +8,6 @@ tags: [release, tms]
 
 TMS 8.1.0 is a significant feature release. Tab Groups are now a first-class citizen, favicons are more reliable, and the suspended tab page can now follow your OS theme automatically.
 
-<!-- truncate -->
-
 ## What's new
 
 ### Tab Group support

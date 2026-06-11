@@ -8,8 +8,6 @@ tags: [release, tms]
 
 The biggest TMS update in years: a complete rewrite to Manifest V3. After a long wait and a lot of work by the community, the extension is now fully compatible with the modern Chrome extension platform.
 
-<!-- truncate -->
-
 ## What's changed
 
 ### Manifest V3 migration
