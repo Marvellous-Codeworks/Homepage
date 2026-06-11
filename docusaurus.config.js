@@ -76,8 +76,8 @@ const config = {
       image: 'img/MarvellousCodeworks_Logo.png',
       colorMode: {
         defaultMode: 'light',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       navbar: {
         title: 'Marvellous Codeworks',
@@ -96,18 +96,19 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'mainSidebar',
             position: 'left',
-            label: 'About',
+            label: 'Docs',
           },
+          { to: '/blog', label: "What's New", position: 'left' },
           {
             href: '/docs/download',
             label: 'Download',
+            position: 'left',
           },
           {
             type: 'html',
             value: '<span class="navbar-separator" aria-hidden="true"></span>',
             position: 'left',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/Marvellous-Codeworks',
             position: 'right',
