@@ -73,7 +73,7 @@ The fastest options:
 
 ### I lost tabs after a browser restart. Can I recover them?
 
-See the [guide for recovering lost tabs](https://github.com/deanoemcke/thegreatsuspender/issues/526) from the original TGS project — the recovery steps still apply.
+See the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project) — the recovery steps still apply.
 
 If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 update, see the [dedicated post on this bug](../../blog/tms-tab-groups-chrome-149-bug).
 
@@ -99,7 +99,7 @@ Only to remove suspended-tab URLs (`chrome-extension://…`) from your history w
 
 ### How can I contribute?
 
-Submit pull requests or bug reports on [GitHub](https://github.com/gioxx/MarvellousSuspender). For new features, open an issue first to discuss the approach before writing code.
+Submit pull requests or bug reports on [GitHub](https://github.com/gioxx/MarvellousSuspender). For new features or general questions, use [GitHub Discussions](https://github.com/gioxx/MarvellousSuspender/discussions) to discuss the approach before writing code or opening a formal issue.
 
 ### How can I translate TMS into my language?
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "FAQ"
 description: Frequently Asked Questions about TMS.
 hide_title: true

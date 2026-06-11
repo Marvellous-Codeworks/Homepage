@@ -57,6 +57,8 @@ const config = {
           },
           blogTitle: 'Blog - Marvellous Codeworks',
           blogDescription: 'Updates about The Marvellous Suspender project',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All posts',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -183,6 +185,10 @@ const config = {
               {
                 label: 'FAQ',
                 href: '/docs/TMS/faq',
+              },
+              {
+                label: 'Discussions',
+                href: 'https://github.com/gioxx/MarvellousSuspender/discussions',
               },
               {
                 label: 'Open an issue',
