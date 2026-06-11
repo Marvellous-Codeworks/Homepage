@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: "Permissions"
 description: What permissions The Great-er Tab Discarder requests and why each one is needed.
-id: tgd-permissions
 tags:
   - TGD
   - The Great-er Tab Discarder

@@ -16,6 +16,8 @@ import heroBanner from './2024-06-24-the-marvellous-suspender-the-last-dance.jpg
 The time for goodbyes has come.
 Due to **my inability** to carry the project forward, and the inevitable future mandatory use of [Manifest V3](https://developer.chrome.com/docs/extensions/develop/migrate/what-is-mv3), [The Marvellous Suspender](https://gioxx.org/chromeaddons/the-marvellous-suspender/) is about to sunset.
 
+{/* truncate */}
+
 When I decided to create [the fork of the original project in 2021](https://gioxx.org/2021/01/18/the-marvellous-suspender-per-google-chrome/), cleaning up the "inconvenient" code, I published the modified extension for myself and some of my colleagues and friends who had been orphaned by The Great Suspender. I did it without any kind of pretense, I did it because I felt like it and because I already had a developer account available that allowed me to upload the extension to Google's public browser add-on gallery. I blogged about it as well because I thought it might please and be useful to some readers.
 
 But then the unexpected happened: TMS [landed on the pages of 9to5Google](https://twitter.com/Gioxx/status/1357463617260691458) and from that moment "__we were no longer (just) four friends at the bar__".

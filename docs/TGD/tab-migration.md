@@ -2,7 +2,6 @@
 sidebar_position: 4
 title: "Migrating tabs from other extensions"
 description: How to migrate suspended tabs from The Marvellous Suspender, The Great Suspender, Tab Suspender, and Tiny Suspender to The Great-er Tab Discarder.
-id: tgd-tab-migration
 tags:
   - TGD
   - The Great-er Tab Discarder

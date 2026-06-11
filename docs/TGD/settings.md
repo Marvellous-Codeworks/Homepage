@@ -2,7 +2,6 @@
 sidebar_position: 2
 title: "Settings reference"
 description: Complete reference for all settings available in The Great-er Tab Discarder.
-id: tgd-settings
 tags:
   - TGD
   - The Great-er Tab Discarder

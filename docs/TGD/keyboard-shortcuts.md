@@ -2,7 +2,6 @@
 sidebar_position: 3
 title: "Keyboard shortcuts"
 description: Keyboard shortcuts available in The Great-er Tab Discarder.
-id: tgd-keyboard-shortcuts
 tags:
   - TGD
   - The Great-er Tab Discarder

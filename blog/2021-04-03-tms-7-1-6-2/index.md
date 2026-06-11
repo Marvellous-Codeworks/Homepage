@@ -8,6 +8,8 @@ tags: [release, tms]
 
 Version 7.1.6.2 brings back multilingual support and addresses a series of issues raised by the community since the initial launch.
 
+{/* truncate */}
+
 ## What's changed
 
 - **Reduced permissions** — The set of required permissions has been trimmed. Because this change affects the extension manifest, users need to reinstall TMS to benefit from the smaller permission footprint.
