@@ -117,7 +117,7 @@ const config = {
             position: 'left',
           },
           {
-            href: '/blog/rss.xml',
+            href: 'pathname:///blog/rss.xml',
             position: 'right',
             className: 'header-rss-link',
             'aria-label': 'RSS feed',
@@ -164,11 +164,11 @@ const config = {
               },
               {
                 label: 'Blog RSS feed',
-                href: '/blog/rss.xml',
+                href: 'pathname:///blog/rss.xml',
               },
               {
                 label: 'Blog Atom feed',
-                href: '/blog/atom.xml',
+                href: 'pathname:///blog/atom.xml',
               },
             ],
           },
