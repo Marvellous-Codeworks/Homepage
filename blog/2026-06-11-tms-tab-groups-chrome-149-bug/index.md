@@ -8,8 +8,6 @@ tags: [bug, news, tms]
 
 If you are using Chrome 149 and noticed that your suspended tabs inside **tab groups** turn into blank New Tab pages after a browser restart, you are not alone — and it is not your fault.
 
-<!-- truncate -->
-
 <img src="/img/suspendy-guy-oops.png" alt="Suspendy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
 
 ## What happened
