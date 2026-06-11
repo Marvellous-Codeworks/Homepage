@@ -8,8 +8,6 @@ tags: [release, tgd, mv3]
 
 After nearly four years, TGD is back — and fully up to date. Version 1.0.0 brings the long-awaited migration to **Manifest V3**, ensuring the extension keeps working as Google phases out Manifest V2 support on the Chrome Web Store.
 
-{/* truncate */}
-
 ## What's changed
 
 ### Manifest V3 migration

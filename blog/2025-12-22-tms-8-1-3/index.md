@@ -8,8 +8,6 @@ tags: [release, tms]
 
 A targeted patch for Vivaldi users who were experiencing crashes related to a browser-specific API inconsistency.
 
-{/* truncate */}
-
 ## What's fixed
 
 ### Vivaldi `getContexts` workaround

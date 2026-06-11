@@ -8,8 +8,6 @@ tags: [release, tgd]
 
 A quick follow-up to the Manifest V3 launch: a bug fix and a couple of Profiler page improvements.
 
-{/* truncate */}
-
 ## What's changed
 
 - **Fixed** a `tempWhitelist` bug introduced during the Manifest V3 migration

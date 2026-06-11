@@ -8,8 +8,6 @@ tags: [release, tgd]
 
 A small patch addressing a timing issue with "Discard at startup" and a layout cleanup on the tab migration page.
 
-{/* truncate */}
-
 ## What's changed
 
 - **Fixed:** "Discard at startup" would occasionally be skipped during browser startup due to a race condition

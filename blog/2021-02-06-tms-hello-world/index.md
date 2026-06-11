@@ -17,8 +17,6 @@ import secondaryBanner from './the-marvellous-suspender-cosa-sta-succedendo.jpg'
 
 I didn’t think I would ever write such an article, yet here we are. I want to tell you very quickly who I am, what I do and what is happening to **The Marvellous Suspender**, an extension for Google Chrome that has suddenly come under the spotlight since Google decided to block and "__withdraw from the market__" the original The Great Suspender. This article is published in Italian and also localized in English to allow all new friends who have landed here to better understand the evolution of history.
 
-{/* truncate */}
-
 <figure className="full-bleed">
   <img src={secondaryBanner} alt="Thanks!" />
   <figcaption>Photo credit: <a href="https://unsplash.com/@wilhelmgunkel?utm_source=Stockpack&utm_medium=referral&utm_campaign=api-credit">Wilhelm Gunkel</a></figcaption>

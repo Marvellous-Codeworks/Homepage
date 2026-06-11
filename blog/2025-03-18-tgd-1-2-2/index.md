@@ -8,8 +8,6 @@ tags: [release, tgd]
 
 A targeted fix for a regression in "Discard at startup" that caused tabs to be discarded during browser idle worker restarts — not just on actual browser startup.
 
-{/* truncate */}
-
 ## What's changed
 
 - **Fixed:** "Discard at startup" (again) — the previous fix in 1.2.1 did not cover the case where Chrome restarts idle service workers in the background. Tabs were being discarded unexpectedly as a result.

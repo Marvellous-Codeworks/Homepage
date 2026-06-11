@@ -8,8 +8,6 @@ tags: [release, tgd]
 
 The biggest feature addition in TGD's history: **Suspending tabs** is now a first-class option alongside Discarding. If you've been using TMS alongside TGD, you may find you no longer need both.
 
-{/* truncate */}
-
 ## What's changed
 
 ### Tab Suspension

@@ -8,8 +8,6 @@ tags: [release, tgd]
 
 A round of fixes and a new migration source: Tab Suspender's `park.html` tabs can now be imported, and several popup/context-menu actions that had quietly broken are working again.
 
-{/* truncate */}
-
 ## What's changed
 
 - **New:** Migrate `park.html` tabs from **Tab Suspender** — one more extension you can leave behind cleanly
