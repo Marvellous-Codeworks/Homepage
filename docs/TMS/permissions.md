@@ -2,7 +2,6 @@
 sidebar_position: 6
 title: "Permissions"
 description: What permissions The Marvellous Suspender requests and why each one is needed.
-id: tms-permissions
 tags:
   - TMS
   - The Marvellous Suspender

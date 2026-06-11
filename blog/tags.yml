@@ -27,3 +27,13 @@ tms:
   label: The Marvellous Suspender
   permalink: /tms
   description: Updates concerning The Marvellous Suspender
+
+release:
+  label: Release
+  permalink: /release
+  description: Extension release notes and changelogs
+
+bug:
+  label: Bug
+  permalink: /bug
+  description: Known bugs and issue tracking
