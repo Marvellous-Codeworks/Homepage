@@ -1,10 +1,15 @@
 ---
 slug: tms-tab-groups-chrome-149-bug
-title: "TMS & Chrome 149: suspended tabs inside tab groups lost after restart"
+title: "TMS & Chrome 149: suspended tabs inside tab groups lost after restart (Updated)"
 date: 2026-06-11T00:00:00+01:00
 authors: [gioxx]
 tags: [bug, news, tms]
 ---
+
+:::info
+The post has been updated! (2026-06-12)
+- A companion extension — [back-grouped-tabs](https://github.com/Marvellous-Codeworks/back-grouped-tabs) — is now available as a temporary workaround while a proper fix for the Chrome bug is being developed. See the [new section below](#companion-workaround-back-grouped-tabs) for details.
+:::
 
 If you are using Chrome 149 and noticed that your suspended tabs inside **tab groups** turn into blank New Tab pages after a browser restart, you are not alone — and it is not your fault.
 
@@ -38,6 +43,18 @@ Until a fix is available, consider **unsuspending tabs before restarting** Chrom
 - We are keeping an eye on the Chrome-side bug; if Google ships a fix first, we will update this post accordingly.
 
 We know how frustrating data loss is, and we are sorry you hit this. Thank you for your patience while we sort it out.
+
+## Companion workaround: back-grouped-tabs {#companion-workaround-back-grouped-tabs}
+
+While a proper fix is in the works, a small companion extension is now available: **[back-grouped-tabs](https://github.com/Marvellous-Codeworks/back-grouped-tabs)**.
+
+It does one thing: when Chrome restores a session and discards suspended tabs inside tab groups, this extension detects the affected tabs and navigates them back so the suspended page reappears — automatically, without you having to click the Back button on each one.
+
+To install it, clone or download the repository and load it as an unpacked extension in Chrome (`chrome://extensions/` → enable Developer Mode → **Load unpacked**). The README covers everything you need to know.
+
+:::note
+This is an intentionally minimal, low-effort solution — a pragmatic stopgap that handles the specific scenario (suspended tabs inside tab groups) without touching tabs outside groups. It will be retired once TMS ships a built-in fix.
+:::
 
 ---
 
