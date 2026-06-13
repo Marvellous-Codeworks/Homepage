@@ -1,6 +1,7 @@
 ---
 slug: tms-tab-groups-chrome-149-bug
 title: "TMS & Chrome 149: suspended tabs inside tab groups lost after restart"
+description: "If you are using Chrome 149 and noticed that your suspended tabs inside tab groups turn into blank New Tab pages after a browser restart, you are not alone — and it is not your fault."
 date: 2026-06-11T00:00:00+01:00
 authors: [gioxx]
 tags: [bug, news, tms, announcement]
