@@ -1,6 +1,6 @@
 ---
 slug: tms-tab-groups-chrome-149-bug
-title: "TMS & Chrome 149: suspended tabs inside tab groups lost after restart (Updated)"
+title: "TMS & Chrome 149: suspended tabs inside tab groups lost after restart"
 date: 2026-06-11T00:00:00+01:00
 authors: [gioxx]
 tags: [bug, news, tms, announcement]
