@@ -10,6 +10,10 @@ tags: [bug, news, tms, announcement]
 :::info
 The post has been updated! (2026-06-12)
 - A companion extension — [back-grouped-tabs](https://github.com/Marvellous-Codeworks/back-grouped-tabs) — is now available as a temporary workaround while a proper fix for the Chrome bug is being developed. See the [new section below](#companion-workaround-back-grouped-tabs) for details.
+
+**Updated again (2026-06-15)**
+- **TMS 8.1.4** has been submitted to the Chrome Web Store and is currently **pending review**. This version includes a fix for the tab group restore issue.
+- The Chrome team is also working on an official browser-side fix: the patch is under review at [chromium-review.googlesource.com](https://chromium-review.googlesource.com/c/chromium/src/+/7933990). It's a race to see who gets there first!
 :::
 
 If you are using Chrome 149 and noticed that your suspended tabs inside **tab groups** turn into blank New Tab pages after a browser restart, you are not alone — and it is not your fault.
@@ -40,8 +44,9 @@ Until a fix is available, consider **unsuspending tabs before restarting** Chrom
 
 ## What we are doing about it
 
-- We have confirmed the root cause and are actively working on **TMS 8.2.0**, which will address this issue along with other pending fixes.
-- We are keeping an eye on the Chrome-side bug; if Google ships a fix first, we will update this post accordingly.
+- **TMS 8.1.4** has been submitted to the Chrome Web Store and is currently **pending review**. It addresses the tab group restore issue directly — suspended tabs inside tab groups will no longer be discarded after a browser restart.
+- In parallel, the Chrome team has an [official fix under review](https://chromium-review.googlesource.com/c/chromium/src/+/7933990) on the browser side. Depending on which ships first, you may see the problem disappear with either a TMS update or a Chrome update.
+- We will keep this post updated as things progress.
 
 We know how frustrating data loss is, and we are sorry you hit this. Thank you for your patience while we sort it out.
 
