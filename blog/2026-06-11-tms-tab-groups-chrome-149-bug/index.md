@@ -53,7 +53,7 @@ Until a fix is available, consider **unsuspending tabs before restarting** Chrom
 
 We know how frustrating data loss is, and we are sorry you hit this. Thank you for your patience while we sort it out.
 
-## Companion workaround: back-grouped-tabs {#companion-workaround-back-grouped-tabs}
+## Companion workaround: back-grouped-tabs
 
 :::success Workaround no longer needed
 **TMS 8.1.4 is out and fixes the issue natively.** If you have updated TMS, you can safely remove the back-grouped-tabs companion extension. The repository remains available for anyone who still wants to use it.
