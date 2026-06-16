@@ -33,6 +33,11 @@ release:
   permalink: /release
   description: Extension release notes and changelogs
 
+announcement:
+  label: Announcement
+  permalink: /announcement
+  description: General announcements from Marvellous Codeworks
+
 bug:
   label: Bug
   permalink: /bug
