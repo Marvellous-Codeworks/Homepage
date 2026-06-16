@@ -13,7 +13,7 @@ tags:
 
 TMS requests only the permissions it genuinely needs to function. This page explains what each permission does and why it is required.
 
-:::info Current version
+:::info[Current version]
 The permission list below reflects TMS **8.x** (Manifest V3). See the [legacy permissions](#legacy-permissions-pre-800) section for what changed compared to 7.x.
 :::
 

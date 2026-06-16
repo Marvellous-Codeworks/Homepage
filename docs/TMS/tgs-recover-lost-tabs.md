@@ -4,7 +4,7 @@ sidebar_label: Recover lost tabs (TGS)
 description: Archived guide from the original The Great Suspender project on recovering tabs lost after an extension update or removal.
 ---
 
-:::note Archived content
+:::note[Archived content]
 This page preserves the content of [deanoemcke/thegreatsuspender#526](https://github.com/deanoemcke/thegreatsuspender/issues/526), the official recovery guide from the original The Great Suspender project. The recovery steps described here still apply to The Marvellous Suspender.
 :::
 

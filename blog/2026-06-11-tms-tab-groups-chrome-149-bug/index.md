@@ -42,7 +42,7 @@ If you lost tabs, there is a way to recover them without restoring a backup:
 
 This is tedious if you have many tabs, but it beats losing them permanently.
 
-:::tip Preventing further losses in the meantime
+:::tip[Preventing further losses in the meantime]
 Until a fix is available, consider **unsuspending tabs before restarting** Chrome, or temporarily moving important tabs **out of tab groups**.
 :::
 
@@ -55,7 +55,7 @@ We know how frustrating data loss is, and we are sorry you hit this. Thank you f
 
 ## Companion workaround: back-grouped-tabs
 
-:::success Workaround no longer needed
+:::info[Workaround no longer needed]
 **TMS 8.1.4 is out and fixes the issue natively.** If you have updated TMS, you can safely remove the back-grouped-tabs companion extension. The repository remains available for anyone who still wants to use it.
 :::
 

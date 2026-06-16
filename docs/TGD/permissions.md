@@ -13,7 +13,7 @@ tags:
 
 TGD requests only the permissions it needs to function. This page explains what each permission does and why it is required.
 
-:::info Current version
+:::info[Current version]
 The permission list below reflects TGD **1.x** (Manifest V3), minimum Chrome version **108**.
 :::
 

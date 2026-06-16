@@ -24,7 +24,7 @@ Installing TMS from source is useful when you want to test a pre-release build, 
 
 The TMS welcome page will open to confirm successful installation.
 
-:::warning Unsuspend before removing older versions
+:::warning[Unsuspend before removing older versions]
 Before removing any previous version of TMS, unsuspend all tabs — suspended tabs belonging to a removed extension disappear permanently.
 :::
 
