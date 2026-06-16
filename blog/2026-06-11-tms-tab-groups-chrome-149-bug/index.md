@@ -65,6 +65,11 @@ It does one thing: when Chrome restores a session and discards suspended tabs in
 
 To install it, clone or download the repository and load it as an unpacked extension in Chrome (`chrome://extensions/` → enable Developer Mode → **Load unpacked**). The README covers everything you need to know.
 
+## References / Links
+
+- https://chromium-review.googlesource.com/c/chromium/src/+/7933990
+- https://chromium-review.googlesource.com/c/chromium/src/+/7738373
+
 ---
 
 *Follow the original issue on GitHub: [#369 – Suspended tabs inside tab groups are lost after browser restart (Chrome 149)](https://github.com/gioxx/MarvellousSuspender/issues/369)*
