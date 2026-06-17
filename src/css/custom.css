@@ -361,3 +361,10 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Remove external link icon from navbar items */
+.navbar__item.navbar__link[href]::after,
+.navbar__link[target='_blank']::after,
+.dropdown__link[target='_blank']::after {
+  display: none;
+}
