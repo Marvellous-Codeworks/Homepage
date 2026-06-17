@@ -229,7 +229,6 @@ const config = {
         copyright: `<div style="padding-top: 18px;padding-bottom: 9px; text-align: right; font-size: 0.8em;">
         <p>Copyright © ${new Date().getFullYear()} Marvellous Codeworks.<br />
         All trademarks mentioned belong to their respective owners; third- party trademarks, product names, trade names, corporate names and companies mentioned may be trademarks of their respective owners or registered trademarks of other companies and have been used for explanatory purposes only and for the benefit of the owner, without any intention of infringing on existing copyright laws.</p>
-        <p>Lovingly developed by the usually-on-vacation brain cell of <a href="https://gfsolone.com/#seguimi" target="_blank" rel="noopener noreferrer">Gioxx</a> ❤️ — Flawed by design, just like my code 🚮</p>
         </div>`
       },
       prism: {
