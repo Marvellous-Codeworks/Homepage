@@ -107,9 +107,19 @@ const config = {
           },
           { to: '/blog', label: "What's New", position: 'left' },
           {
-            href: '/docs/download',
+            type: 'dropdown',
             label: 'Download',
             position: 'left',
+            items: [
+              {
+                label: 'The Great-er Tab Discarder',
+                href: 'https://www.marvellouscode.works/tgd',
+              },
+              {
+                label: 'The Marvellous Suspender',
+                href: 'https://www.marvellouscode.works/tms',
+              },
+            ],
           },
           {
             type: 'html',
@@ -177,7 +187,7 @@ const config = {
             items: [
               {
                 label: 'Download TGD',
-                to: '/docs/download#the-great-er-tab-discarder',
+                href: 'https://www.marvellouscode.works/tgd',
               },
               {
                 label: 'FAQ',
@@ -198,7 +208,7 @@ const config = {
             items: [
               {
                 label: 'Download TMS',
-                to: '/docs/download#the-marvellous-suspender',
+                href: 'https://www.marvellouscode.works/tms',
               },
               {
                 label: 'FAQ',
