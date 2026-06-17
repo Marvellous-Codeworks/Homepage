@@ -362,9 +362,9 @@
   }
 }
 
-/* Remove external link icon from navbar items */
-.navbar__item.navbar__link[href]::after,
-.navbar__link[target='_blank']::after,
-.dropdown__link[target='_blank']::after {
+/* Remove external link icon from navbar and dropdown items */
+a.navbar__item svg,
+a.navbar__link svg,
+.dropdown__link svg {
   display: none;
 }
