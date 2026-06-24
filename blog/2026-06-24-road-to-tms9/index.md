@@ -15,7 +15,7 @@ This is the first in a series of posts we're calling **Road to TMS 9** — a cha
 
 Today: the visual redesign.
 
-<!--truncate-->
+{/* truncate */}
 
 ## A design system from scratch
 
