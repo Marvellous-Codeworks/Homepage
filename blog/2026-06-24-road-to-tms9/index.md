@@ -2,7 +2,7 @@
 slug: road-to-tms9-visual-redesign
 title: "Road to TMS 9: a new look for a new era"
 description: "TMS 9 is coming, and before we ship it we want to bring you along for the ride. The first stop is a complete visual redesign — new design system, new fonts, new brand identity — and a peek at features already living on the feature branch."
-date: 2026-06-24T00:00:00+01:00
+date: 2026-06-25T00:00:00+01:00
 authors: [gioxx]
 tags: [tms, road-to-tms9, announcement]
 ---
