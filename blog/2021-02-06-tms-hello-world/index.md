@@ -7,7 +7,7 @@ tags: [news, tms]
 ---
 
 import TweetEmbed from '@site/src/components/TweetEmbed';
-import heroBanner from './Banner_The-Marvellous-Suspender-Hello-World_Marvellous-Codeworks.jpg';
+import heroBanner from './Banner_The-Marvellous-Suspender-Hello-World_Marvellous-Codeworks.webp';
 import secondaryBanner from './the-marvellous-suspender-cosa-sta-succedendo.jpg';
 
 <figure className="full-bleed">
