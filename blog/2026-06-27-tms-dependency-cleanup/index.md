@@ -7,7 +7,7 @@ authors: [gioxx]
 tags: [tms,road-to-tms9]
 ---
 
-Not every update comes with a shiny new feature. Sometimes the most important work happens completely out of sight — and the next TMS release is a good example of that. We replaced two third-party libraries that had been silently aging inside the extension, and we want to be transparent about what changed and why.
+TMS 9 is shaping up to be one of the most significant releases in the extension's history — if you have been following along, you already know about the automatic session backups and the Google Drive integration we covered in the previous posts. But not all of the work that goes into a release shows up in the changelog. Some of the most important changes happen completely out of sight, and this one is a good example of that. We replaced two third-party libraries that had been silently aging inside the extension, and we want to be transparent about what changed and why.
 
 ## What is a "third-party library" and why should you care?
 
