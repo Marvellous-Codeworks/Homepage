@@ -9,7 +9,7 @@ tags: [bug, news, tms, announcement]
 
 If you are using **Microsoft Edge** and noticed that your suspended tabs inside **tab groups** disappear or turn into blank New Tab pages after a browser restart, you are running into the same Chromium-level regression that [first appeared in Chrome 149](/blog/tms-tab-groups-chrome-149-bug) — and it is now reaching Edge users too.
 
-<img src="/img/suspendy-guy-oops.png" alt="Suspendy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
+<img src="/img/suspendy-guy-oops.webp" alt="Suspendy Guy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
 
 ## What happened
 

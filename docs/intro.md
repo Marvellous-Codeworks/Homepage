@@ -21,7 +21,7 @@ import XIcon from '@site/src/components/XIcon';
 
 ## Who We Are 🧙‍♂️
 
-<img src="/img/suspendy-guy.png" align="right" width="18%" />
+<img src="/img/suspendy-guy.webp" alt="Suspendy Guy" align="right" width="18%" />
 
 **Marvellous Codeworks** was created to provide a single home for The Marvellous Suspender and The Great-_er_ Tab Discarder, Google Chrome extensions that originated as forks of abandoned projects or - worse still, as in the case of TMS — were sold to a third party that injected malicious code into one of the most popular extensions on the market.  
 
