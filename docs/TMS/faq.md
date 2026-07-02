@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: "FAQ"
 description: Frequently Asked Questions about The Marvellous Suspender.
 hide_title: true
@@ -13,9 +13,11 @@ tags:
 
 # Frequently Asked Questions
 
+*The Marvellous Suspender is referred to as **TMS** throughout this documentation.*
+
 ## General
 
-### Is The Marvellous Suspender open source?
+### Is TMS open source?
 
 **Yes.** The code is [publicly available on GitHub](https://github.com/gioxx/MarvellousSuspender) under the GNU General Public License v2.
 
@@ -25,7 +27,7 @@ The primary distribution channel is the Chrome Web Store. For Chromium-based bro
 
 ### Is TMS free? Does it collect my data?
 
-TMS is completely free, contains no ads, and collects no user data. Everything stays local to your browser profile. See [Permissions](./permissions) for a full breakdown.
+TMS is completely free, contains no ads, and collects no user data. Everything stays local to your browser profile, with one opt-in exception: if you enable the [Google Drive backup destination](./pages/backup-sync#google-drive), your own session backups are uploaded directly to your own Google Drive — never to a Marvellous Codeworks server. See [Permissions](./permissions) for a full breakdown.
 
 ### What happened to The Great Suspender?
 
@@ -41,7 +43,7 @@ From the [Chrome Web Store](https://go.gioxx.org/tgs). If you prefer to load it 
 
 ### What version of Chrome do I need?
 
-TMS 8.x requires **Chrome 110 or later**. The extension uses Manifest V3, which is not available in older Chrome versions.
+TMS requires **Chrome 110 or later** (this has not changed since 8.x). The extension uses Manifest V3, which is not available in older Chrome versions.
 
 ### TMS showed a "new version available" banner even though I already updated. What gives?
 
@@ -59,7 +61,7 @@ Several settings can prevent a tab from being suspended automatically:
 - The tab is **playing audio**
 - The tab is the **active (focused) tab** in its window
 - The tab contains **unsaved form data**
-- The tab's URL matches an entry in your **whitelist**
+- The tab's URL matches an entry in your **never-suspend list**
 - The "Suspend automatically after" timer is set to **Never**
 - The device is connected to power and "Only suspend on battery" is enabled
 - The device is offline and "Only suspend when connected" is enabled
@@ -69,17 +71,25 @@ Several settings can prevent a tab from being suspended automatically:
 The fastest options:
 - **Pin the tab** — pinned tabs are excluded from auto-suspension by default.
 - **Right-click the tab → TMS → Pause** — pauses auto-suspension for that tab until the next reload.
-- **Add the URL to the whitelist** in Settings → Suspend → Never suspend.
+- **Add the URL to the never-suspend list** in Settings → Suspend → Never suspend.
 
 ### I lost tabs after a browser restart. Can I recover them?
 
-See the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project) — the recovery steps still apply.
+First check [Session Management → Recent sessions](./pages/session-management#recent-sessions) — TMS automatically creates a restore point at browser start, so your tabs are very likely already there. If not, see the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project) — the recovery steps still apply.
 
-If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 update, see the [dedicated post on this bug](../../blog/tms-tab-groups-chrome-149-bug).
+If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 update, see the [dedicated post on this bug](../../blog/tms-tab-groups-chrome-149-bug) and try the one-click repair on the [Tab Health](./pages/tab-health#broken-tab-groups-after-restart) page.
 
 ### Can I import sessions from The Great Suspender?
 
-**Yes.** Open the TMS Session Management page (extension popup → Session Manager icon) and use the **Import** function to load a session file exported from TGS.
+**Yes.** Open the TMS [Session Management](./pages/session-management) page (extension popup → Session Manager icon) and use the **Import** function to load a session file exported from TGS. If you still have suspended TGS tabs open, [Session Management → Migrate](./pages/session-management#migrate-from-another-suspender) can convert them to TMS in place, without needing a file at all.
+
+### Some of my suspended tabs show a generic icon instead of the site's real favicon. How do I fix this?
+
+Open [Tab Health](./pages/tab-health), click **Scan tabs**, and use the offered repair action — TMS detects and fixes this automatically. See [Tab Health → Repair actions](./pages/tab-health#repair-actions) for what each fix does.
+
+### Can TMS back up my tabs automatically, including across multiple computers?
+
+Yes — see [Backup & Sync](./pages/backup-sync). Automatic backups can be saved locally or to Google Drive, and if you use TMS on more than one device with the same Google account, each device's backups rotate independently so a small session from a laptop can't push out a large session's backups from your main machine.
 
 ---
 
@@ -93,6 +103,10 @@ This is required by Chrome's `scripting` API, which TMS uses to detect unsaved f
 
 Only to remove suspended-tab URLs (`chrome-extension://…`) from your history when you restore a tab, so those internal pages don't pollute your history. TMS never reads, uploads, or stores your history.
 
+### Why does TMS ask for the `downloads` and `identity` permissions?
+
+Both were added in TMS 9 for the optional [Backup & Sync](./pages/backup-sync) feature: `downloads` lets TMS save local backup files to your Downloads folder, and `identity` lets TMS authenticate with Google Drive if you choose that as your backup destination. Neither permission does anything unless you turn on automatic backups yourself. See [Permissions → New in 9.x](./permissions#new-in-9x-downloads-identity--google-drive).
+
 ---
 
 ## Contributing and localization
@@ -100,6 +114,10 @@ Only to remove suspended-tab URLs (`chrome-extension://…`) from your history w
 ### How can I contribute?
 
 Submit pull requests or bug reports on [GitHub](https://github.com/gioxx/MarvellousSuspender). For new features or general questions, use [GitHub Discussions](https://github.com/gioxx/MarvellousSuspender/discussions) to discuss the approach before writing code or opening a formal issue.
+
+### What should I include in a bug report?
+
+For anything related to broken favicons or Tab Groups, run a scan on [Tab Health](./pages/tab-health) and use **Copy report** to paste the results directly into your issue. For anything else, open the [Diagnostic page](./pages/diagnostic-page), enable **captureLogs**, reproduce the problem, then use **Copy report** or **Download report** — this bundles your TMS version, browser details and recent logs into one shareable block.
 
 ### How can I translate TMS into my language?
 

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 1
 title: "Settings reference"
 description: Complete reference for all settings available in The Marvellous Suspender.
 id: tms-settings
@@ -14,6 +14,8 @@ tags:
 
 Open the TMS settings page from the extension popup or by navigating to `chrome://extensions/` → TMS → **Details** → **Extension options**.
 
+This page (`options.html`) covers general behavior, automatic suspension and the suspended-tab page. Automatic backups and session restore now live on their own dedicated pages — see [Backup & Sync](./backup-sync) and [Session Management](./session-management).
+
 ---
 
 ## General
@@ -21,7 +23,7 @@ Open the TMS settings page from the extension popup or by navigating to `chrome:
 ### Language
 Controls the language used throughout the extension UI. Set to **System** (default) to follow your browser's locale, or pick a specific language from the list.
 
-Supported languages: Arabic, Czech, German, English, Spanish, French (generic + France), Indonesian, Italian, Japanese, Portuguese (Brazil + Portugal), Russian, Sinhala, Slovak, Turkish, Chinese (Simplified + Traditional).
+TMS is already available in more than 15 languages, managed and kept up to date via [Crowdin](https://crowdin.com/project/tms) — see the dropdown in Settings for the current full list.
 
 ### Theme
 Controls the appearance of the suspended tab page.
@@ -39,7 +41,7 @@ Adds TMS commands to the browser's right-click context menu on tabs. Disabled in
 Syncs your TMS configuration via your Google account using Chrome's sync storage. Useful if you use Chrome on multiple computers.
 
 :::note
-Sync has a storage size limit. If you have a very large whitelist, sync may not work reliably.
+Sync has a storage size limit. If your never-suspend list is very large, sync may not work reliably. In that case, use [Backup & Sync](./backup-sync#settings-backup) instead — it can save your full settings file to a local file or to Google Drive, with no size restriction.
 :::
 
 ---
@@ -73,17 +75,20 @@ When TMS is updated or reloaded, it automatically takes ownership of any already
 ### Suspend in place of discard (low memory)
 When Chrome is about to discard a tab due to memory pressure, TMS intercepts the action and suspends the tab instead (preserving the URL on a TMS page). Discarded tabs are harder to recover than suspended ones.
 
-### Never suspend (whitelist)
-A list of URL patterns that TMS will never suspend. One pattern per line. Supports:
+### Never-suspend list
+A list of URL patterns that TMS will never suspend automatically — labeled on the page as "Never suspend tabs with URLs from the following list". One pattern per line. Supports:
 - Full URLs: `https://mail.google.com`
 - Domain patterns: `google.com` (matches all pages on that domain)
 - Regular expressions: `/^https:.*google\.com/`
 
-Use the **Test** link below the text area to check whether a given URL would be matched.
+Use the **Test whitelist** link below the text area to check whether a given URL would be matched, and **Wake whitelisted tabs** to immediately unsuspend any currently-suspended tab in the window that matches an entry you just added.
 
 ---
 
 ## Suspended Tabs
+
+### Append original URL to suspended tab title
+Enabled by default. Appends the original page URL to the browser tab's underlying `document.title` (not the visible text on the suspended page itself) so that Chrome's **Search Tabs** feature (`Ctrl+Shift+A`) can find a suspended tab by typing its hostname, not just its page title.
 
 ### Unsuspend automatically when tab is focused
 When you switch to a suspended tab, TMS immediately starts loading it without requiring you to click. Convenient if you switch tabs frequently and want seamless restoration.
