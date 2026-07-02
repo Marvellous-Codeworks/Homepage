@@ -2,7 +2,6 @@
 sidebar_position: 10
 title: "System & recovery pages"
 description: Reference for the transient screens TMS shows around updates, restarts and permission prompts — what each one means and what to do.
-id: tms-system-pages
 tags:
   - TMS
   - The Marvellous Suspender

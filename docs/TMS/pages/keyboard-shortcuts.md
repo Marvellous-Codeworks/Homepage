@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: "Keyboard shortcuts"
 description: All keyboard shortcuts available in The Marvellous Suspender and how to customize them.
-id: tms-keyboard-shortcuts
 tags:
   - TMS
   - The Marvellous Suspender

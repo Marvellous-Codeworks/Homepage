@@ -2,7 +2,6 @@
 sidebar_position: 7
 title: "About & Support"
 description: What's on the About page — version info, project links, contributors, and how to support TMS development.
-id: tms-about-support
 tags:
   - TMS
   - The Marvellous Suspender

@@ -2,7 +2,6 @@
 sidebar_position: 3
 title: "Backup & Sync"
 description: Complete reference for TMS's automatic session backup, multi-device Google Drive sync, restore, and settings backup.
-id: tms-backup-sync
 tags:
   - TMS
   - The Marvellous Suspender

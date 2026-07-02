@@ -2,7 +2,6 @@
 sidebar_position: 4
 title: "Tab Health"
 description: Complete reference for the Tab Health page — scanning for broken favicons and Tab Groups issues, and the automatic repair actions TMS offers.
-id: tms-tab-health
 tags:
   - TMS
   - The Marvellous Suspender

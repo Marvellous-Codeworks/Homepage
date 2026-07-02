@@ -2,7 +2,6 @@
 sidebar_position: 1
 title: "Settings reference"
 description: Complete reference for all settings available in The Marvellous Suspender.
-id: tms-settings
 tags:
   - TMS
   - The Marvellous Suspender

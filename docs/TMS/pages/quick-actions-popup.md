@@ -2,7 +2,6 @@
 sidebar_position: 8
 title: "Toolbar popup & quick actions"
 description: Complete reference for the TMS toolbar popup menu and the equivalent right-click context menu commands.
-id: tms-quick-actions-popup
 tags:
   - TMS
   - The Marvellous Suspender

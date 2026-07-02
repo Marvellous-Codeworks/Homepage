@@ -2,7 +2,6 @@
 sidebar_position: 9
 title: "Diagnostic page"
 description: Complete reference for TMS's advanced Diagnostic & Debugger page — log capture, debug toggles, and the tab profiler.
-id: tms-diagnostic-page
 tags:
   - TMS
   - The Marvellous Suspender

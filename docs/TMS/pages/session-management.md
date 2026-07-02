@@ -2,7 +2,6 @@
 sidebar_position: 2
 title: "Session management"
 description: Complete reference for the Session Management page — current session, recovery history, saved sessions, import/export and migration from other suspenders.
-id: tms-session-management
 tags:
   - TMS
   - The Marvellous Suspender

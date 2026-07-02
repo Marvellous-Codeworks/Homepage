@@ -2,7 +2,6 @@
 sidebar_position: 6
 title: "News feed"
 description: Complete reference for the in-extension News page — where articles come from, the unread badge, and refresh timing.
-id: tms-news-feed
 tags:
   - TMS
   - The Marvellous Suspender
