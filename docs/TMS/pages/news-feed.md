@@ -37,7 +37,12 @@ No fetch happens more often than the cache allows — there is no way to "poll" 
 - New articles are marked with a blue left border and a **NEW** pill next to the date — merely opening the News page does **not** mark anything as read.
 - Clicking an article's title link marks that one article as read and removes the highlight.
 - **Mark all as read** appears above the grid whenever at least one article is unread, and disappears once everything has been read.
+
+![Unread articles with the NEW pill, and the "Mark all as read" link](./img/news-feed/03-mark-all-read.webp)
+
 - A small red badge dot appears next to **News** in the left sidebar on every extension page whenever unread articles exist, updating live if the feed refreshes while you have a page open — no reload needed.
+
+![Close-up of the sidebar "News" entry with the unread badge dot](./img/news-feed/02-badge.webp)
 
 ---
 

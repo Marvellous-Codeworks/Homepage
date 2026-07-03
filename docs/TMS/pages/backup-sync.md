@@ -38,6 +38,8 @@ Toggle **Enable automatic backup**. Once enabled, four settings become available
 
 Click **Backup now** at any time to run a backup immediately, independent of the schedule. To prevent accidental spam, the button (and the "Save settings to Drive" button) is disabled for 30 seconds after each run — a countdown in the status bar shows when it re-enables.
 
+![Backup now button, next run time, and the device-identifier explanation](./img/backup-sync/01c-backup-now.webp)
+
 If a backup produces an empty result (no open windows/tabs to save), TMS silently skips it — no empty backup files are created.
 
 ![Automatic backup enabled with destination set to Local](./img/backup-sync/01-auto-backup-settings.webp)

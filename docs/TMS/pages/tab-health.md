@@ -35,7 +35,7 @@ Click **Scan tabs**. TMS inspects every open tab across every window and reports
 
 A ✓ next to a row means that category found nothing wrong.
 
-![Scan results with all categories showing a ✓, and the "We didn't find any issues" message](./img/tab-health/02-scan-results.webp)
+![Scan results with all categories showing a ✓](./img/tab-health/02-scan-results.webp)
 
 *Dark theme:*
 
@@ -80,5 +80,7 @@ For related background on lost/disappearing tabs in general (not specific to Tab
 ## Copying a report for a bug report
 
 After a scan, a **Copy report** button appears. It copies your TMS version number, the full scan results, and the raw per-category counts to your clipboard as plain text — paste this directly into a [GitHub issue](https://github.com/gioxx/MarvellousSuspender/issues) so maintainers can see exactly what your scan found without you needing to describe it manually.
+
+![The "Copy results" button and its GitHub issue hint](./img/tab-health/03-copy-report.webp)
 
 For deeper diagnostics (error logs, tab profiler, Service Worker state), see the [Diagnostic page](./diagnostic-page).

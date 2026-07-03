@@ -22,7 +22,7 @@ For everyday tab issues (broken favicons, Tab Groups after a restart), try [Tab 
 
 ## Controls
 
-![Diagnostic page Controls grid, log buffer and tab profiler](./img/diagnostic-page/01-controls.webp)
+![Diagnostic page Controls grid: captureLogs, discardInPlaceOfSuspend, claim suspended tabs, news feed, backup device identity](./img/diagnostic-page/01-controls.webp)
 
 ### captureLogs
 Off by default. When enabled, TMS also captures `warning()` and regular `log()` calls from the Service Worker into the persistent log buffer (errors are **always** captured regardless of this toggle). Turn this on *before* reproducing an intermittent bug, then use **Download report** once you've reproduced it. The flag persists across Service Worker restarts.
@@ -45,6 +45,8 @@ Shows this browser installation's backup device ID and friendly name (see [Backu
 
 A live, colour-coded (by severity) view of the persistent log buffer — up to 500 entries, surviving Service Worker restarts.
 
+![Log buffer heading, action buttons, and the empty-state message](./img/diagnostic-page/02-log-buffer.webp)
+
 | Button | Effect |
 |---|---|
 | **Refresh** | Reloads the log view from storage |
@@ -59,3 +61,5 @@ Use **Copy report** or **Download report** when filing a [GitHub issue](https://
 ## Tab profiler
 
 A live table of every currently open tab TMS is tracking, refreshed continuously: window ID, tab ID, tab index, tab group, title, remaining time before auto-suspend (MM:SS), and current status. Useful for confirming *why* a specific tab isn't being suspended when you expect it to be — cross-reference the status column against [Settings → Suspend](./settings#suspend) and the [popup's status descriptions](./quick-actions-popup#status-line).
+
+![Tab profiler table listing every open tab with its window/tab ID, group, title and status](./img/diagnostic-page/03-tab-profiler.webp)
