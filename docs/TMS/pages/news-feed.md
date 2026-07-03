@@ -14,6 +14,12 @@ Open the News page from the left sidebar (**News**). Available in Incognito wind
 
 News is a lightweight, built-in reader for the Marvellous Codeworks blog — release notes, deep-dives and announcements about TMS — without requiring you to visit the site or subscribe to anything separately.
 
+![The News page, showing a grid of article cards with unread NEW pills](./img/news-feed/01-news-grid.webp)
+
+*Dark theme:*
+
+![The News page in dark theme](./img/news-feed/01-news-grid-dark.webp)
+
 ---
 
 ## Where the content comes from

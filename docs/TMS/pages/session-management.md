@@ -15,6 +15,12 @@ Open the Session Management page from the extension popup (**Session Manager**) 
 
 The page is organized into four sections, each reachable from the in-page navigation at the top: **Current session**, **Recent sessions**, **Saved sessions**, and **Migrate**.
 
+![Session Management page showing all four sections: Current session, Recent sessions, Saved sessions, and Tab migration](./img/session-management/01-overview.webp)
+
+*Dark theme:*
+
+![Session Management page in dark theme](./img/session-management/01-overview-dark.webp)
+
 :::note
 This page is TMS's built-in, always-on session history — it works even if you never touch the automatic [Backup & Sync](./backup-sync) feature. Think of Session Management as "what TMS already remembers about your tabs" and Backup & Sync as "an extra copy saved outside the browser."
 :::

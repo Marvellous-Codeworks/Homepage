@@ -19,6 +19,12 @@ Besides the extension's main pages (Settings, Session Management, Backup & Sync,
 
 The page shown in place of every tab TMS suspends (`suspended.html`). It shows the site's favicon and title, the original URL, and a hint on how to reload it (click anywhere, or use the tab-toggle [keyboard shortcut](./keyboard-shortcuts)). Its appearance (light/dark, screenshot preview) is controlled from [Settings → Suspended Tabs](./settings#suspended-tabs).
 
+![A suspended tab, showing the site's favicon, title and original URL](./img/system-pages/01-suspended-page.webp)
+
+*Dark theme:*
+
+![A suspended tab in dark theme](./img/system-pages/01-suspended-page-dark.webp)
+
 If you see **"This site cannot be reached"** on what should be a suspended tab, see [My suspended tab says "This site cannot be reached"](../tgs-recover-lost-tabs#my-suspended-tab-says-this-site-cannot-be-reached).
 
 ## Update screens
@@ -36,6 +42,12 @@ You do not need to act on either screen unless something looks wrong — both ar
 
 - **Restore tabs automatically** — reopens the listed tabs for you
 - **Manage manually** — jumps to [Session Management](./session-management) so you can pick specific windows/tabs yourself instead
+
+![Recovery screen listing the tabs to restore, with "Restore tabs automatically" and "Go to Session Manager" buttons](./img/system-pages/02-recovery-screen.webp)
+
+Once restoration finishes, a success screen confirms all tabs were restored:
+
+![Recovery success screen: "Marvellous success! All your tabs have been restored."](./img/system-pages/02b-recovery-success.webp)
 
 If [screen capture](./settings#screen-capture-on-suspended-tab-page) is enabled, a notice on this screen offers a quick link to disable it — screenshots are the most expensive part of a suspend/restore cycle on very large sessions, so switching it off here can speed up recovery on future restarts.
 

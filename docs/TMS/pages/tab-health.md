@@ -22,6 +22,8 @@ Tab Health is a self-service diagnostic tool: it scans all of your currently ope
 
 Click **Scan tabs**. TMS inspects every open tab across every window and reports:
 
+![Tab Health page before scanning, showing the intro text and Scan tabs button](./img/tab-health/01-before-scan.webp)
+
 | Metric | Meaning |
 |---|---|
 | Suspended tabs | Total tabs currently suspended by TMS |
@@ -32,6 +34,12 @@ Click **Scan tabs**. TMS inspects every open tab across every window and reports
 | » Broken Tab Groups | Grouped tabs affected by the Chrome/Brave restart bug (see below) |
 
 A ✓ next to a row means that category found nothing wrong.
+
+![Scan results with all categories showing a ✓, and the "We didn't find any issues" message](./img/tab-health/02-scan-results.webp)
+
+*Dark theme:*
+
+![Scan results in dark theme](./img/tab-health/02-scan-results-dark.webp)
 
 ---
 

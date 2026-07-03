@@ -22,6 +22,8 @@ For everyday tab issues (broken favicons, Tab Groups after a restart), try [Tab 
 
 ## Controls
 
+![Diagnostic page Controls grid, log buffer and tab profiler](./img/diagnostic-page/01-controls.webp)
+
 ### captureLogs
 Off by default. When enabled, TMS also captures `warning()` and regular `log()` calls from the Service Worker into the persistent log buffer (errors are **always** captured regardless of this toggle). Turn this on *before* reproducing an intermittent bug, then use **Download report** once you've reproduced it. The flag persists across Service Worker restarts.
 

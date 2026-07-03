@@ -36,6 +36,10 @@ At the top of the popup, TMS shows the current tab's status and, for several sta
 
 If a scheduled Google Drive backup recently failed, a red banner appears above the menu — click it to jump straight to [Backup & Sync](./backup-sync) and reconnect.
 
+Example of the **Special** status, shown here on an internal extension page (dark theme):
+
+![Popup on a special/internal tab, showing "Tab cannot be suspended"](./img/quick-actions-popup/03-popup-special-dark.webp)
+
 ---
 
 ## Current tab
@@ -46,6 +50,8 @@ If a scheduled Google Drive backup recently failed, a red banner appears above t
 | **Suspend tab** | Suspends the current tab immediately, bypassing the inactivity timer |
 | **Never suspend this page** | Adds the exact URL to the [never-suspend list](./settings#never-suspend-list) |
 | **Never suspend this domain** | Adds the domain (matches all pages on it) to the never-suspend list |
+
+![Popup open on an already-suspended tab, with real browser chrome visible](./img/quick-actions-popup/02-popup-suspended.webp)
 
 ## Selected tabs
 
@@ -90,6 +96,8 @@ If **Enable context menu** is on in [Settings → General](./settings#enable-con
 |---|---|
 | **Open link in a suspended tab** | Right-click a hyperlink on any page to open it directly in a new, already-suspended tab, without ever loading it live |
 | **Toggle pause suspension** | Equivalent to the popup's Pause/Unpause action, available as a direct one-click toggle |
+
+![Right-click context menu on a tab, showing the TMS submenu](./img/quick-actions-popup/05-context-menu.webp)
 
 The context menu is unavailable in Incognito windows regardless of the setting.
 

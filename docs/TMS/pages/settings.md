@@ -15,6 +15,12 @@ Open the TMS settings page from the extension popup or by navigating to `chrome:
 
 This page (`options.html`) covers general behavior, automatic suspension and the suspended-tab page. Automatic backups and session restore now live on their own dedicated pages — see [Backup & Sync](./backup-sync) and [Session Management](./session-management).
 
+![Settings page, showing the General, Automatic tab suspension and Suspended tabs sections](./img/settings/01-overview.webp)
+
+*Dark theme (also showing the Theme dropdown set to Dark):*
+
+![Settings page in dark theme](./img/settings/01-overview-dark.webp)
+
 ---
 
 ## General
