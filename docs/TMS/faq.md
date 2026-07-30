@@ -27,7 +27,7 @@ The primary distribution channel is the Chrome Web Store. For Chromium-based bro
 
 ### Is TMS free? Does it collect my data?
 
-TMS is completely free, contains no ads, and collects no user data. Everything stays local to your browser profile, with one opt-in exception: if you enable the [Google Drive backup destination](./pages/backup-sync#google-drive), your own session backups are uploaded directly to your own Google Drive — never to a Marvellous Codeworks server. See [Permissions](./permissions) for a full breakdown.
+TMS is completely free, contains no ads, and collects no user data. Everything stays local to your browser profile, with one opt-in exception: if you enable the [Google Drive backup destination](./pages/backup-sync#google-drive), your own session backups are uploaded directly to your own Google Drive, never to a Marvellous Codeworks server. See [Permissions](./permissions) for a full breakdown.
 
 ### What happened to The Great Suspender?
 
@@ -69,13 +69,13 @@ Several settings can prevent a tab from being suspended automatically:
 ### A tab I was working on got suspended unexpectedly. How do I prevent this?
 
 The fastest options:
-- **Pin the tab** — pinned tabs are excluded from auto-suspension by default.
-- **Right-click the tab → TMS → Pause** — pauses auto-suspension for that tab until the next reload.
+- **Pin the tab**: pinned tabs are excluded from auto-suspension by default.
+- **Right-click the tab → TMS → Pause**: pauses auto-suspension for that tab until the next reload.
 - **Add the URL to the never-suspend list** in Settings → Suspend → Never suspend.
 
 ### I lost tabs after a browser restart. Can I recover them?
 
-First check [Session Management → Recent sessions](./pages/session-management#recent-sessions) — TMS automatically creates a restore point at browser start, so your tabs are very likely already there. If not, see the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project) — the recovery steps still apply.
+First check [Session Management → Recent sessions](./pages/session-management#recent-sessions), TMS automatically creates a restore point at browser start, so your tabs are very likely already there. If not, see the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project), the recovery steps still apply.
 
 If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 update, see the [dedicated post on this bug](../../blog/tms-tab-groups-chrome-149-bug) and try the one-click repair on the [Tab Health](./pages/tab-health#broken-tab-groups-after-restart) page.
 
@@ -85,11 +85,11 @@ If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 updat
 
 ### Some of my suspended tabs show a generic icon instead of the site's real favicon. How do I fix this?
 
-Open [Tab Health](./pages/tab-health), click **Scan tabs**, and use the offered repair action — TMS detects and fixes this automatically. See [Tab Health → Repair actions](./pages/tab-health#repair-actions) for what each fix does.
+Open [Tab Health](./pages/tab-health), click **Scan tabs**, and use the offered repair action, TMS detects and fixes this automatically. See [Tab Health → Repair actions](./pages/tab-health#repair-actions) for what each fix does.
 
 ### Can TMS back up my tabs automatically, including across multiple computers?
 
-Yes — see [Backup & Sync](./pages/backup-sync). Automatic backups can be saved locally or to Google Drive, and if you use TMS on more than one device with the same Google account, each device's backups rotate independently so a small session from a laptop can't push out a large session's backups from your main machine.
+Yes, see [Backup & Sync](./pages/backup-sync). Automatic backups can be saved locally or to Google Drive, and if you use TMS on more than one device with the same Google account, each device's backups rotate independently so a small session from a laptop can't push out a large session's backups from your main machine.
 
 ---
 
@@ -97,7 +97,7 @@ Yes — see [Backup & Sync](./pages/backup-sync). Automatic backups can be saved
 
 ### Why does TMS need access to all websites (`http://*/*`)?
 
-This is required by Chrome's `scripting` API, which TMS uses to detect unsaved form data and read scroll positions before suspending. Without host permissions, these content scripts cannot run. The permission does not give TMS the ability to read or transmit your browsing data — the full explanation is on the [Permissions](./permissions) page.
+This is required by Chrome's `scripting` API, which TMS uses to detect unsaved form data and read scroll positions before suspending. Without host permissions, these content scripts cannot run. The permission does not give TMS the ability to read or transmit your browsing data, the full explanation is on the [Permissions](./permissions) page.
 
 ### Why does TMS need access to my browsing history?
 
@@ -117,7 +117,7 @@ Submit pull requests or bug reports on [GitHub](https://github.com/gioxx/Marvell
 
 ### What should I include in a bug report?
 
-For anything related to broken favicons or Tab Groups, run a scan on [Tab Health](./pages/tab-health) and use **Copy report** to paste the results directly into your issue. For anything else, open the [Diagnostic page](./pages/diagnostic-page), enable **captureLogs**, reproduce the problem, then use **Copy report** or **Download report** — this bundles your TMS version, browser details and recent logs into one shareable block.
+For anything related to broken favicons or Tab Groups, run a scan on [Tab Health](./pages/tab-health) and use **Copy report** to paste the results directly into your issue. For anything else, open the [Diagnostic page](./pages/diagnostic-page), enable **captureLogs**, reproduce the problem, then use **Copy report** or **Download report**, this bundles your TMS version, browser details and recent logs into one shareable block.
 
 ### How can I translate TMS into my language?
 
