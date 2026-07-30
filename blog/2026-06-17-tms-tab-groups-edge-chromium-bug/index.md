@@ -7,13 +7,13 @@ authors: [gioxx]
 tags: [bug, news, tms, announcement]
 ---
 
-If you are using **Microsoft Edge** and noticed that your suspended tabs inside **tab groups** disappear or turn into blank New Tab pages after a browser restart, you are running into the same Chromium-level regression that [first appeared in Chrome 149](/blog/tms-tab-groups-chrome-149-bug) — and it is now reaching Edge users too.
+If you are using **Microsoft Edge** and noticed that your suspended tabs inside **tab groups** disappear or turn into blank New Tab pages after a browser restart, you are running into the same Chromium-level regression that [first appeared in Chrome 149](/blog/tms-tab-groups-chrome-149-bug), and it is now reaching Edge users too.
 
 <img src="/img/suspendy-guy-oops.webp" alt="Suspendy Guy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
 
 ## What happened
 
-Microsoft Edge is built on the Chromium engine, which means it inherits browser-level changes from the upstream Chromium project — including regressions. The change introduced around Chromium 149 that broke the tab group restore behavior for suspended tabs is now making its way into Edge builds.
+Microsoft Edge is built on the Chromium engine, which means it inherits browser-level changes from the upstream Chromium project, including regressions. The change introduced around Chromium 149 that broke the tab group restore behavior for suspended tabs is now making its way into Edge builds.
 
 As a result, Edge users are experiencing the same symptoms Chrome users saw earlier:
 
@@ -21,16 +21,16 @@ As a result, Edge users are experiencing the same symptoms Chrome users saw earl
 - Tabs **outside tab groups** are not affected and restore correctly.
 - The suspended tab URL (`chrome-extension://…` / `extension://…`) is apparently filtered out during session restore when inside a group.
 
-This is tracked in the dedicated GitHub issue **[#374](https://github.com/gioxx/MarvellousSuspender/issues/374)**, opened specifically for Edge. Issue **[#369](https://github.com/gioxx/MarvellousSuspender/issues/369)** — the original Chrome report — has also been reopened because of these lingering effects across the Chromium ecosystem.
+This is tracked in the dedicated GitHub issue **[#374](https://github.com/gioxx/MarvellousSuspender/issues/374)**, opened specifically for Edge. Issue **[#369](https://github.com/gioxx/MarvellousSuspender/issues/369)**, the original Chrome report, has also been reopened because of these lingering effects across the Chromium ecosystem.
 
 ## Current status
 
 To be clear about where things stand right now:
 
-- The **browser-side Chromium fix** is [under review](https://chromium-review.googlesource.com/c/chromium/src/+/7933990) but has **not yet landed in Chrome's stable channel** — Chrome 149.0.7827.156 is still affected. The fix is expected sometime this weekend or early next week.
+- The **browser-side Chromium fix** is [under review](https://chromium-review.googlesource.com/c/chromium/src/+/7933990) but has **not yet landed in Chrome's stable channel**, Chrome 149.0.7827.156 is still affected. The fix is expected sometime this weekend or early next week.
 - **Edge will take even longer**, as it follows its own release schedule on top of Chromium's.
 - **TMS 8.1.4** addressed the issue for Chrome users at the extension level, but some edge cases are still being investigated (see [#369](https://github.com/gioxx/MarvellousSuspender/issues/369)).
-- **TMS 8.1.5** is in active development and specifically targets the Edge regression. A fix has already been tested and looks solid — we expect a release candidate to be ready very soon.
+- **TMS 8.1.5** is in active development and specifically targets the Edge regression. A fix has already been tested and looks solid, we expect a release candidate to be ready very soon.
 
 We are not waiting for the browser vendors to ship their fix. We are shipping our own.
 
@@ -53,7 +53,7 @@ Until TMS 8.1.5 is available, consider **unsuspending tabs before restarting** t
 ## What we are doing about it
 
 - **TMS 8.1.5** is coming, with a targeted fix for Edge. Follow [PR #376](https://github.com/gioxx/MarvellousSuspender/pull/376) for progress.
-- We are tracking the Edge-specific report in **[issue #374](https://github.com/gioxx/MarvellousSuspender/issues/374)** — follow it for real-time updates.
+- We are tracking the Edge-specific report in **[issue #374](https://github.com/gioxx/MarvellousSuspender/issues/374)**, follow it for real-time updates.
 - Issue **[#369](https://github.com/gioxx/MarvellousSuspender/issues/369)** has been reopened to track lingering issues for Chrome users on TMS 8.1.4 as well.
 - The upstream Chromium fix ([chromium-review.googlesource.com](https://chromium-review.googlesource.com/c/chromium/src/+/7933990)) will eventually reach Edge too, but we are not relying on that timeline.
 
