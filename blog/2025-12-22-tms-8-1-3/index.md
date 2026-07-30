@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-1-3
-title: "The Marvellous Suspender 8.1.3 — Vivaldi fix"
+title: "The Marvellous Suspender 8.1.3 - Vivaldi fix"
 date: 2025-12-22T09:04:26+01:00
 authors: [gioxx, rkodey]
 tags: [release, tms]
