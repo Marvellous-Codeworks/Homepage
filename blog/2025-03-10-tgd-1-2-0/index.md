@@ -10,9 +10,9 @@ A round of fixes and a new migration source: Tab Suspender's `park.html` tabs ca
 
 ## What's changed
 
-- **New:** Migrate `park.html` tabs from **Tab Suspender** — one more extension you can leave behind cleanly
-- **Fixed:** "Pause discarding this tab" (previously "Don't discard this tab for now") — the action was not working; also renamed to better reflect what it actually does
-- **Fixed:** Several popup and context-menu actions that had stopped working after the Manifest V3 rewrite — options storage code was largely rewritten to address the root cause
+- **New:** Migrate `park.html` tabs from **Tab Suspender**, one more extension you can leave behind cleanly
+- **Fixed:** "Pause discarding this tab" (previously "Don't discard this tab for now"), the action was not working; also renamed to better reflect what it actually does
+- **Fixed:** Several popup and context-menu actions that had stopped working after the Manifest V3 rewrite, options storage code was largely rewritten to address the root cause
 - **New:** Tab Groups are now optionally displayed on the Profiler page
 
 ---
