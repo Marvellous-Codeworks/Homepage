@@ -23,7 +23,7 @@ import XIcon from '@site/src/components/XIcon';
 
 <img src="/img/suspendy-guy.webp" alt="Suspendy Guy" align="right" width="18%" />
 
-**Marvellous Codeworks** was created to provide a single home for The Marvellous Suspender and The Great-_er_ Tab Discarder, Google Chrome extensions that originated as forks of abandoned projects or - worse still, as in the case of TMS — were sold to a third party that injected malicious code into one of the most popular extensions on the market.  
+**Marvellous Codeworks** was created to provide a single home for The Marvellous Suspender and The Great-_er_ Tab Discarder, Google Chrome extensions that originated as forks of abandoned projects or - worse still, as in the case of TMS, were sold to a third party that injected malicious code into one of the most popular extensions on the market.  
 
 Even today, despite its best efforts and numerous targeted improvements, Google Chrome is still unable to make efficient use of a PC’s RAM when multiple tabs are open at the same time. The Marvellous Suspender (TMS) and The Great-_er_ Tab Discarder (TGD) address this very issue, attempting to __patch things up__ and thus curb the voracious appetite of Google’s browser.
 
