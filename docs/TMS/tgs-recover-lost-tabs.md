@@ -39,7 +39,7 @@ If you failed to unsuspend all tabs before uninstalling and have lost tabs, plea
 
 Please note, uninstalling the extension will also permanently remove all extension data including tab history and extension options. Reinstalling the extension will not enable you to do any sort of recovery.
 
-It is recommended that anyone wanting to remove the extension first backs up their tabs using another extension called [Session Buddy](https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en). This tool allows you to back up all your tabs and restore them again at a later date. Please be aware that tabs suspended at the time the Session Buddy backup is performed will not have their correct URLs — these links will only work as long as The Great Suspender (or The Marvellous Suspender) is currently installed. If you want the real URLs in your backup, you need to unsuspend all your tabs first.
+It is recommended that anyone wanting to remove the extension first backs up their tabs using another extension called [Session Buddy](https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko?hl=en). This tool allows you to back up all your tabs and restore them again at a later date. Please be aware that tabs suspended at the time the Session Buddy backup is performed will not have their correct URLs, these links will only work as long as The Great Suspender (or The Marvellous Suspender) is currently installed. If you want the real URLs in your backup, you need to unsuspend all your tabs first.
 
 ---
 
@@ -65,7 +65,7 @@ Before continuing, check that you have not simply switched Chrome profiles. If y
 
 ### How to recover lost tabs with The Great Suspender
 
-The extension comes with its own tab history management UI. Go to the extension options page (from **Settings** in the popup, or **Options** when right-clicking the extension icon). Then in the settings sidebar click on **Session management**. This will show your most recent tab sessions — click on each session to see the individual windows and tabs it contains.
+The extension comes with its own tab history management UI. Go to the extension options page (from **Settings** in the popup, or **Options** when right-clicking the extension icon). Then in the settings sidebar click on **Session management**. This will show your most recent tab sessions, click on each session to see the individual windows and tabs it contains.
 
 To reload a session, click the **reload** link. This will reload all windows and tabs in an unsuspended state. If your session contains a very large number of tabs, you might instead want to click **resuspend**, which will be much faster as it reloads the tabs in a suspended state.
 
@@ -82,7 +82,7 @@ Chrome/Default/IndexedDB/chrome-extension_klbibkeccnjlkjkiokjodocebajanakg_0.ind
 
 ### How to recover lost tabs without The Great Suspender
 
-Navigate to `chrome://history` in a new tab. You will see a list of tabs you have visited in the past, grouped by date with the most recent at the top. Somewhere in this list you will have a record of all the tabs you lost — they can be a bit tricky to find because they are mixed in with all the tabs you have visited and purposely closed.
+Navigate to `chrome://history` in a new tab. You will see a list of tabs you have visited in the past, grouped by date with the most recent at the top. Somewhere in this list you will have a record of all the tabs you lost, they can be a bit tricky to find because they are mixed in with all the tabs you have visited and purposely closed.
 
 For example, if you opened a tab one week ago, and it got suspended and you never revisited it, then in Chrome history it will be grouped with all the tabs from one week ago.
 
