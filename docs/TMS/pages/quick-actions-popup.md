@@ -21,20 +21,20 @@ At the top of the popup, TMS shows the current tab's status and, for several sta
 
 | Status shown | Meaning | Inline action |
 |---|---|---|
-| Normal / Active | Tab will be suspended automatically per your timer | **Pause** — excludes this tab from auto-suspend until it's next reloaded |
-| Suspended | Tab is already suspended | — |
-| Never | Auto-suspend is disabled (**Suspend automatically after** = Never) | — |
+| Normal / Active | Tab will be suspended automatically per your timer | **Pause** - excludes this tab from auto-suspend until it's next reloaded |
+| Suspended | Tab is already suspended | - |
+| Never | Auto-suspend is disabled (**Suspend automatically after** = Never) | - |
 | Whitelisted | Tab's URL matches an entry in your [never-suspend list](./settings#never-suspend-list) | **Remove from whitelist** |
-| Special | An internal/unsuspendable page (e.g. `chrome://`, the Chrome Web Store) | — |
-| Audible | Tab is playing audio and is excluded from auto-suspend | — |
+| Special | An internal/unsuspendable page (e.g. `chrome://`, the Chrome Web Store) | - |
+| Audible | Tab is playing audio and is excluded from auto-suspend | - |
 | Unsaved form data | TMS detected an active, unsaved form and is excluding the tab | **Unpause** |
-| Pinned | Tab is pinned and excluded from auto-suspend | — |
+| Pinned | Tab is pinned and excluded from auto-suspend | - |
 | Paused | You manually paused this tab | **Unpause** |
-| No connectivity | Browser is offline and **Only suspend when connected** is enabled | — |
-| Charging | Device is on power and **Only suspend when on battery** is enabled | — |
+| No connectivity | Browser is offline and **Only suspend when connected** is enabled | - |
+| Charging | Device is on power and **Only suspend when on battery** is enabled | - |
 | Local file blocked | TMS lacks permission to read this local file | **Grant permission** → opens the [file permissions prompt](#local-file-permissions) |
 
-If a scheduled Google Drive backup recently failed, a red banner appears above the menu — click it to jump straight to [Backup & Sync](./backup-sync) and reconnect.
+If a scheduled Google Drive backup recently failed, a red banner appears above the menu, click it to jump straight to [Backup & Sync](./backup-sync) and reconnect.
 
 Example of the **Special** status, shown here on an internal extension page (dark theme):
 
@@ -66,9 +66,9 @@ Shown only when more than one tab is highlighted in the tab strip (`Shift`/`Ctrl
 
 | Menu item | Effect |
 |---|---|
-| **Suspend other tabs** | Suspends every tab in the current window except the active one (a "soft" suspend — see [keyboard shortcuts](./keyboard-shortcuts) for the "force" variant, which also suspends the active tab) |
+| **Suspend other tabs** | Suspends every tab in the current window except the active one (a "soft" suspend, see [keyboard shortcuts](./keyboard-shortcuts) for the "force" variant, which also suspends the active tab) |
 | **Unsuspend all tabs** | Unsuspends every tab in the current window |
-| **Unsuspend whitelisted tabs** | Unsuspends only the tabs in the current window that match an entry in your never-suspend list — useful right after editing that list |
+| **Unsuspend whitelisted tabs** | Unsuspends only the tabs in the current window that match an entry in your never-suspend list, useful right after editing that list |
 
 ## Backup
 
