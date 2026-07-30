@@ -1,12 +1,12 @@
 ---
 slug: tgd-release-1-1-0
-title: "The Great-er Tab Discarder 1.1.0 — New name, dark mode, TMS migration"
+title: "The Great-er Tab Discarder 1.1.0 - New name, dark mode, TMS migration"
 date: 2025-02-24T15:17:13Z
 authors: [rkodey]
 tags: [release, tgd]
 ---
 
-Three things at once: a new name with a small but meaningful tweak, automatic dark mode support, and a feature for users coming over from The Marvellous Suspender or The Great Suspender (notrack) — TGD can now migrate their suspended tabs directly.
+Three things at once: a new name with a small but meaningful tweak, automatic dark mode support, and a feature for users coming over from The Marvellous Suspender or The Great Suspender (notrack), TGD can now migrate their suspended tabs directly.
 
 ## What's changed
 
@@ -16,7 +16,7 @@ TGD can now detect and migrate `suspended.html` tabs from extensions like **The 
 
 ### Automatic dark mode
 
-The extension UI now follows the system dark mode preference automatically — no manual toggle needed.
+The extension UI now follows the system dark mode preference automatically, no manual toggle needed.
 
 ### New name
 
