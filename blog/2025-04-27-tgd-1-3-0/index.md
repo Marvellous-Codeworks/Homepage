@@ -1,6 +1,6 @@
 ---
 slug: tgd-release-1-3-0
-title: "The Great-er Tab Discarder 1.3.0 — Suspending tabs"
+title: "The Great-er Tab Discarder 1.3.0 - Suspending tabs"
 date: 2025-04-27T19:25:17Z
 authors: [rkodey]
 tags: [release, tgd]
@@ -12,14 +12,14 @@ The biggest feature addition in TGD's history: **Suspending tabs** is now a firs
 
 ### Tab Suspension
 
-TGD can now **Suspend** tabs in addition to Discarding them. Suspending keeps the tab visible with its title and favicon while freeing memory — the difference from Discarding is that the tab shows a dedicated suspended page rather than being silently unloaded by the browser.
+TGD can now **Suspend** tabs in addition to Discarding them. Suspending keeps the tab visible with its title and favicon while freeing memory, the difference from Discarding is that the tab shows a dedicated suspended page rather than being silently unloaded by the browser.
 
 - Suspend individual tabs from the extension popup or via keyboard shortcuts
-- Switch between automatic Suspending and Discarding in Settings — you choose which behaviour applies to idle tabs
+- Switch between automatic Suspending and Discarding in Settings, you choose which behaviour applies to idle tabs
 
 ### Customizable suspended tab titles
 
-Suspended tabs can now display a custom **title prefix** to distinguish them visually at a glance. Example prefixes: `💤` `🔴` `🟡` — plus a full range of color options.
+Suspended tabs can now display a custom **title prefix** to distinguish them visually at a glance. Example prefixes: `💤` `🔴` `🟡`, plus a full range of color options.
 
 ### Improved tab migration
 
