@@ -1,6 +1,6 @@
 ---
 slug: tms-release-7-1-6-1
-title: "The Marvellous Suspender 7.1.6.1 — Hello World"
+title: "The Marvellous Suspender 7.1.6.1: Hello World"
 date: 2021-01-20T17:38:16+01:00
 authors: [gioxx]
 tags: [release, tms]
