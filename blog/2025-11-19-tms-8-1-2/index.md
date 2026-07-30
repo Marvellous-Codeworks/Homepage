@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-1-2
-title: "The Marvellous Suspender 8.1.2 — Session export, watermark, and UX fixes"
+title: "The Marvellous Suspender 8.1.2 - Session export, watermark, and UX fixes"
 date: 2025-11-19T15:21:59+01:00
 authors: [gioxx, rkodey]
 tags: [release, tms]
@@ -17,7 +17,7 @@ When you export your session from the Session Management page, the downloaded fi
 The suspended tab page now displays the TMS version number as a subtle watermark. This small addition makes it easier to identify which version was running when users share screenshots in bug reports.
 
 ### Update banner is now clickable
-The "a new version is available" notification banner is now interactive — clicking it takes you directly to the release page instead of requiring you to navigate there manually.
+The "a new version is available" notification banner is now interactive, clicking it takes you directly to the release page instead of requiring you to navigate there manually.
 
 ### Session page scroll fix
 Links within the Session Management page no longer cause the page to jump back to the top when clicked.
