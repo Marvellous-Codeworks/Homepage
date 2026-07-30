@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-1-4
-title: "The Marvellous Suspender 8.1.4 — Tab group restore fix for Chrome 149"
+title: "The Marvellous Suspender 8.1.4 - Tab group restore fix for Chrome 149"
 date: 2026-06-16T00:00:00+01:00
 authors: [gioxx, rkodey]
 tags: [release, tms]
@@ -11,7 +11,7 @@ A targeted fix release addressing the tab group restore regression introduced by
 ## What's fixed
 
 ### Suspended tabs inside tab groups restored correctly after restart
-Starting with Chrome 149, a change in the browser's session restore engine caused tabs with non-`https://` URLs — including TMS suspended tabs — to be skipped when restoring tab groups. This resulted in blank New Tab pages appearing in place of your suspended tabs after every restart.
+Starting with Chrome 149, a change in the browser's session restore engine caused tabs with non-`https://` URLs, including TMS suspended tabs, to be skipped when restoring tab groups. This resulted in blank New Tab pages appearing in place of your suspended tabs after every restart.
 
 TMS 8.1.4 works around the Chrome-side behavior and restores suspended tabs inside tab groups correctly again. Tabs outside tab groups were not affected and continue to work as before.
 
