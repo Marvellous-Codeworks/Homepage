@@ -14,14 +14,14 @@ tags:
 
 Open the Backup page from the extension popup or from **Backup** in the left sidebar (shown on every extension page). Not available in Incognito windows.
 
-This page covers three independent features: **automatic session backup**, **restoring a session from a backup file**, and **backing up/restoring your TMS settings**. All three are optional — TMS works fully without ever touching this page, since it also keeps its own [session history](./session-management) locally.
+This page covers three independent features: **automatic session backup**, **restoring a session from a backup file**, and **backing up/restoring your TMS settings**. All three are optional, TMS works fully without ever touching this page, since it also keeps its own [session history](./session-management) locally.
 
 ---
 
 ## Automatic session backup
 
 ### What gets backed up
-On each run, TMS backs up your **current session**: every open window, its tabs (original URLs, not the internal suspended-page URL) and Chrome Tab Group assignments — the same data you'd get from an [Export](./session-management#export) in Session Management, just automated and written to a file.
+On each run, TMS backs up your **current session**: every open window, its tabs (original URLs, not the internal suspended-page URL) and Chrome Tab Group assignments, the same data you'd get from an [Export](./session-management#export) in Session Management, just automated and written to a file.
 
 ### Enable automatic backup
 
@@ -36,11 +36,11 @@ Toggle **Enable automatic backup**. Once enabled, four settings become available
 | **Backup destination** | **Local** (saved to your Downloads folder) or **Google Drive** (see below). |
 | **Max backups per device** | How many backup files to keep before older ones are automatically deleted. Default 10, configurable from 2 to 50. |
 
-Click **Backup now** at any time to run a backup immediately, independent of the schedule. To prevent accidental spam, the button (and the "Save settings to Drive" button) is disabled for 30 seconds after each run — a countdown in the status bar shows when it re-enables.
+Click **Backup now** at any time to run a backup immediately, independent of the schedule. To prevent accidental spam, the button (and the "Save settings to Drive" button) is disabled for 30 seconds after each run, a countdown in the status bar shows when it re-enables.
 
 ![Backup now button, next run time, and the device-identifier explanation](./img/backup-sync/01c-backup-now.webp)
 
-If a backup produces an empty result (no open windows/tabs to save), TMS silently skips it — no empty backup files are created.
+If a backup produces an empty result (no open windows/tabs to save), TMS silently skips it, no empty backup files are created.
 
 ![Automatic backup enabled with destination set to Local](./img/backup-sync/01-auto-backup-settings.webp)
 
@@ -49,36 +49,36 @@ If a backup produces an empty result (no open windows/tabs to save), TMS silentl
 ![Automatic backup settings in dark theme](./img/backup-sync/01-auto-backup-settings-dark.webp)
 
 ### Local backups
-Files are written to `Downloads/tms-backups/tms-session-{deviceId}-{timestamp}.json`. The `{deviceId}` is a random 8-character identifier generated once per browser installation and stored locally — it exists purely so that two browsers writing to the same Downloads folder (e.g. Chrome and Brave on the same machine) never overwrite each other's files. Rotation keeps only the newest **Max backups per device** files for *this* installation.
+Files are written to `Downloads/tms-backups/tms-session-{deviceId}-{timestamp}.json`. The `{deviceId}` is a random 8-character identifier generated once per browser installation and stored locally, it exists purely so that two browsers writing to the same Downloads folder (e.g. Chrome and Brave on the same machine) never overwrite each other's files. Rotation keeps only the newest **Max backups per device** files for *this* installation.
 
 ### Google Drive
 Switching **Backup destination** to Google Drive before connecting an account shows a **Connect Google Account** prompt in place of the backup/disconnect buttons:
 
 ![Backup destination set to Google Drive, not yet connected](./img/backup-sync/01b-drive-not-connected.webp)
 
-Click **Connect** to sign in with your Google account through a standard Google OAuth consent flow — choose the account, then confirm access:
+Click **Connect** to sign in with your Google account through a standard Google OAuth consent flow, choose the account, then confirm access:
 
 ![Google's "Choose an account" screen for the TMS Drive connection](./img/backup-sync/07-google-oauth-account-chooser.webp)
 
 ![Google's consent screen showing the narrow drive.appdata scope requested](./img/backup-sync/08-google-oauth-consent.webp)
 
-TMS requests only the narrow `drive.appdata` scope — see [Permissions](../permissions#new-in-9x-downloads-identity--google-drive) for what that does and does not allow. Once connected you'll see the connected account and the destination folder shown on the page:
+TMS requests only the narrow `drive.appdata` scope, see [Permissions](../permissions#new-in-9x-downloads-identity--google-drive) for what that does and does not allow. Once connected you'll see the connected account and the destination folder shown on the page:
 
 ![Backup page with Google Drive connected, showing account and folder](./img/backup-sync/02-drive-connected.webp)
 
-Backups on Drive live in a hidden, app-only folder (`appDataFolder`) that never appears in your regular Google Drive file list — this is also why there is no "open in Drive" link for it. Filenames follow the same `tms-session-{deviceId}-{timestamp}.json` pattern as local backups.
+Backups on Drive live in a hidden, app-only folder (`appDataFolder`) that never appears in your regular Google Drive file list, this is also why there is no "open in Drive" link for it. Filenames follow the same `tms-session-{deviceId}-{timestamp}.json` pattern as local backups.
 
 #### Multi-device rotation
-If you use TMS on more than one machine with the same Google account, each device's backups are rotated **independently** — a lightweight session synced from a laptop with three tabs open will never push out backups from your primary desktop's 40-tab session. This works via a small per-device registry file (`tms-device-{deviceId}.json`) that TMS keeps up to date with the device's friendly name and the time it last backed up.
+If you use TMS on more than one machine with the same Google account, each device's backups are rotated **independently**, a lightweight session synced from a laptop with three tabs open will never push out backups from your primary desktop's 40-tab session. This works via a small per-device registry file (`tms-device-{deviceId}.json`) that TMS keeps up to date with the device's friendly name and the time it last backed up.
 
 #### Disconnecting
-The **Disconnect** button revokes the OAuth token (`chrome.identity.removeCachedAuthToken` + a call to Google's token-revocation endpoint). Existing backup files on Drive are **not** deleted — only the connection from this browser is removed.
+The **Disconnect** button revokes the OAuth token (`chrome.identity.removeCachedAuthToken` + a call to Google's token-revocation endpoint). Existing backup files on Drive are **not** deleted, only the connection from this browser is removed.
 
 #### If Drive authentication fails
 If a scheduled Drive backup fails because the connection expired or was revoked elsewhere, TMS shows a small red badge on the toolbar icon and a banner in the popup. Clicking the banner opens this page so you can reconnect.
 
 ### Switching destination from Drive to Local
-If you switch the destination from **Google Drive** to **Local**, a dialog offers to import your most recent Drive backup directly into [Saved sessions](./session-management#saved-sessions) — a safety net so you don't lose access to that data just because you stopped using Drive. If Drive was never connected, or has no backups, this dialog is skipped.
+If you switch the destination from **Google Drive** to **Local**, a dialog offers to import your most recent Drive backup directly into [Saved sessions](./session-management#saved-sessions), a safety net so you don't lose access to that data just because you stopped using Drive. If Drive was never connected, or has no backups, this dialog is skipped.
 
 ---
 
@@ -92,12 +92,12 @@ A separate section below the backup settings, independent of whether automatic b
 Click **Restore from file**, pick a `tms-session-*.json` file (from this machine's Downloads or copied from anywhere else), and TMS imports it as a new entry in [Saved sessions](./session-management#saved-sessions), auto-named from its timestamp (e.g. "Backup 2026-06-24 09:30"). Open Session Management to actually reopen the tabs.
 
 ### From Google Drive
-Shown only when Drive is connected. The dropdown lists every backup found in your Drive `appDataFolder`, grouped by device name (an `optgroup` per device, plus a "Legacy backups" group for files created before the multi-device format existed). Pick one and click **Import** — same outcome as the local flow: it lands in Saved sessions.
+Shown only when Drive is connected. The dropdown lists every backup found in your Drive `appDataFolder`, grouped by device name (an `optgroup` per device, plus a "Legacy backups" group for files created before the multi-device format existed). Pick one and click **Import**, same outcome as the local flow: it lands in Saved sessions.
 
 ### Browsing/downloading raw Drive files
 A collapsible **Drive backup files** panel lists every backup on Drive with its date and size, numbered sequentially. Each row offers:
-- **Download** — saves the raw `.json` to your local Downloads folder without importing it
-- **Delete** — permanently removes that one backup file from Drive, after a confirmation prompt
+- **Download**: saves the raw `.json` to your local Downloads folder without importing it
+- **Delete**: permanently removes that one backup file from Drive, after a confirmation prompt
 
 ![Expanded Drive backup files panel with a numbered row and Download/Delete buttons](./img/backup-sync/04-drive-files-panel.webp)
 
@@ -105,7 +105,7 @@ A collapsible **Drive backup files** panel lists every backup on Drive with its 
 
 ## Settings backup
 
-Separate from session backup — this saves your TMS *configuration* (all the toggles in [Settings](./settings), the never-suspend list, etc.), not your open tabs.
+Separate from session backup, this saves your TMS *configuration* (all the toggles in [Settings](./settings), the never-suspend list, etc.), not your open tabs.
 
 ![Settings backup section with Local and Google Drive cards, showing the last Drive backup date](./img/backup-sync/05-settings-backup.webp)
 
@@ -115,7 +115,7 @@ Separate from session backup — this saves your TMS *configuration* (all the to
 
 ### Google Drive
 Shown only when Drive is connected.
-- **Save settings to Drive** uploads `tms-settings.json` to the same hidden `appDataFolder`. If a settings backup already exists, you're asked to confirm overwriting it — and TMS also keeps one extra safety copy (`tms-settings-prev.json`) of whatever was there before, so a mistaken overwrite is still recoverable.
+- **Save settings to Drive** uploads `tms-settings.json` to the same hidden `appDataFolder`. If a settings backup already exists, you're asked to confirm overwriting it, and TMS also keeps one extra safety copy (`tms-settings-prev.json`) of whatever was there before, so a mistaken overwrite is still recoverable.
 - **Restore settings from Drive** downloads and applies the current `tms-settings.json`, after confirmation.
 
 The date of the last Drive settings backup is shown next to the section title once one exists.
@@ -124,6 +124,6 @@ The date of the last Drive settings backup is shown next to the section title on
 
 ## Related
 
-- [Session management](./session-management) — TMS's always-on local session history, independent of this page
-- [Permissions](../permissions#new-in-9x-downloads-identity--google-drive) — exactly what the `downloads` and `identity` permissions and the `drive.appdata` OAuth scope allow
-- [Diagnostic page](./diagnostic-page) — shows this device's backup ID and name for troubleshooting
+- [Session management](./session-management): TMS's always-on local session history, independent of this page
+- [Permissions](../permissions#new-in-9x-downloads-identity--google-drive): exactly what the `downloads` and `identity` permissions and the `drive.appdata` OAuth scope allow
+- [Diagnostic page](./diagnostic-page): shows this device's backup ID and name for troubleshooting
