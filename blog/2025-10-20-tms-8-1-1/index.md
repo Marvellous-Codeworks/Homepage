@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-1-1
-title: "The Marvellous Suspender 8.1.1 — Update detection fix"
+title: "The Marvellous Suspender 8.1.1 - Update detection fix"
 date: 2025-10-20T14:53:38+02:00
 authors: [gioxx, rkodey]
 tags: [release, tms]
