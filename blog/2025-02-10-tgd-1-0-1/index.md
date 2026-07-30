@@ -12,7 +12,7 @@ A quick follow-up to the Manifest V3 launch: a bug fix and a couple of Profiler 
 
 - **Fixed** a `tempWhitelist` bug introduced during the Manifest V3 migration
 - **Profiler page** now shows tab group and pinned status for each tab
-- **Profiler page** now groups tabs by Window — thanks again to [@vapier](https://github.com/vapier)
+- **Profiler page** now groups tabs by Window, thanks again to [@vapier](https://github.com/vapier)
 - Added a direct link to the Profiler page in the extension popup
 
 ---
