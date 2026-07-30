@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-1-0
-title: "The Marvellous Suspender 8.1.0 — Tab Groups, automatic theme, and more"
+title: "The Marvellous Suspender 8.1.0 - Tab Groups, automatic theme, and more"
 date: 2025-10-13T08:15:23+02:00
 authors: [gioxx, rkodey]
 tags: [release, tms]
