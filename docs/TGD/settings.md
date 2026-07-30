@@ -13,7 +13,7 @@ tags:
 
 Open the TGD settings from the extension popup, or navigate to `chrome://extensions/` → The Great-er Tab Discarder → **Details** → **Extension options**.
 
-Settings are saved automatically — there is no Save button.
+Settings are saved automatically, there is no Save button.
 
 ---
 
@@ -72,8 +72,8 @@ google.com
 /^https:.*github\.com/
 ```
 
-- **Exact or partial URL** — `google.com` matches any URL containing that string
-- **Regular expression** — enclose in forward slashes: `/^https:.*google\.com/`
+- **Exact or partial URL**: `google.com` matches any URL containing that string
+- **Regular expression**: enclose in forward slashes: `/^https:.*google\.com/`
 
 ---
 
