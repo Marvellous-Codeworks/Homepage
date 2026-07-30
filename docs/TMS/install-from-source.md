@@ -15,7 +15,7 @@ Installing TMS from source is useful when you want to test a pre-release build, 
 
 > Requires **Google Chrome 110 or later** (Manifest V3).
 
-## Option A — Load a release archive
+## Option A: Load a release archive
 
 1. Download the **[latest release](https://github.com/gioxx/MarvellousSuspender/releases)** and unarchive it to a folder of your choice.
 2. In Chrome, navigate to `chrome://extensions/` and enable **Developer mode** (toggle in the top-right corner).
@@ -25,10 +25,10 @@ Installing TMS from source is useful when you want to test a pre-release build, 
 The TMS welcome page will open to confirm successful installation.
 
 :::warning[Unsuspend before removing older versions]
-Before removing any previous version of TMS, unsuspend all tabs — suspended tabs belonging to a removed extension disappear permanently.
+Before removing any previous version of TMS, unsuspend all tabs, suspended tabs belonging to a removed extension disappear permanently.
 :::
 
-## Option B — Build from source
+## Option B: Build from source
 
 ### Prerequisites
 
@@ -52,8 +52,8 @@ Done, without errors.
 ```
 
 You will find:
-- `build/crx/` — the extension packaged as `.crx`
-- `build/zip/` — a `.zip` archive you can load as unpacked
+- `build/crx/`: the extension packaged as `.crx`
+- `build/zip/`: a `.zip` archive you can load as unpacked
 
 ### Loading the built extension
 
