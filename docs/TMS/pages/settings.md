@@ -13,7 +13,7 @@ tags:
 
 Open the TMS settings page from the extension popup or by navigating to `chrome://extensions/` → TMS → **Details** → **Extension options**.
 
-This page (`options.html`) covers general behavior, automatic suspension and the suspended-tab page. Automatic backups and session restore now live on their own dedicated pages — see [Backup & Sync](./backup-sync) and [Session Management](./session-management).
+This page (`options.html`) covers general behavior, automatic suspension and the suspended-tab page. Automatic backups and session restore now live on their own dedicated pages, see [Backup & Sync](./backup-sync) and [Session Management](./session-management).
 
 ![Settings page, showing the General, Automatic tab suspension and Suspended tabs sections](./img/settings/01-overview.webp)
 
@@ -28,7 +28,7 @@ This page (`options.html`) covers general behavior, automatic suspension and the
 ### Language
 Controls the language used throughout the extension UI. Set to **System** (default) to follow your browser's locale, or pick a specific language from the list.
 
-TMS is already available in more than 15 languages, managed and kept up to date via [Crowdin](https://crowdin.com/project/tms) — see the dropdown in Settings for the current full list.
+TMS is already available in more than 15 languages, managed and kept up to date via [Crowdin](https://crowdin.com/project/tms), see the dropdown in Settings for the current full list.
 
 ### Theme
 Controls the appearance of the suspended tab page.
@@ -46,7 +46,7 @@ Adds TMS commands to the browser's right-click context menu on tabs. Disabled in
 Syncs your TMS configuration via your Google account using Chrome's sync storage. Useful if you use Chrome on multiple computers.
 
 :::note
-Sync has a storage size limit. If your never-suspend list is very large, sync may not work reliably. In that case, use [Backup & Sync](./backup-sync#settings-backup) instead — it can save your full settings file to a local file or to Google Drive, with no size restriction.
+Sync has a storage size limit. If your never-suspend list is very large, sync may not work reliably. In that case, use [Backup & Sync](./backup-sync#settings-backup) instead, it can save your full settings file to a local file or to Google Drive, with no size restriction.
 :::
 
 ---
@@ -81,7 +81,7 @@ When TMS is updated or reloaded, it automatically takes ownership of any already
 When Chrome is about to discard a tab due to memory pressure, TMS intercepts the action and suspends the tab instead (preserving the URL on a TMS page). Discarded tabs are harder to recover than suspended ones.
 
 ### Never-suspend list
-A list of URL patterns that TMS will never suspend automatically — labeled on the page as "Never suspend tabs with URLs from the following list". One pattern per line. Supports:
+A list of URL patterns that TMS will never suspend automatically, labeled on the page as "Never suspend tabs with URLs from the following list". One pattern per line. Supports:
 - Full URLs: `https://mail.google.com`
 - Domain patterns: `google.com` (matches all pages on that domain)
 - Regular expressions: `/^https:.*google\.com/`
