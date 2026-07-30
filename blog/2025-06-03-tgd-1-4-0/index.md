@@ -6,7 +6,7 @@ authors: [rkodey]
 tags: [release, tgd]
 ---
 
-A polished release focused on the suspended-tab experience: favicon dimming, flexible restore options, popup improvements, and automatic options saving — plus a fix for suspended tabs that Chrome was blocking on direct load.
+A polished release focused on the suspended-tab experience: favicon dimming, flexible restore options, popup improvements, and automatic options saving, plus a fix for suspended tabs that Chrome was blocking on direct load.
 
 ## What's changed
 
@@ -14,13 +14,13 @@ A polished release focused on the suspended-tab experience: favicon dimming, fle
 
 Three new options for how suspended tabs look and behave:
 
-- **Favicon dimming** — the favicon of a suspended tab is visually dimmed to distinguish it from active tabs at a glance
-- **Restore by clicking anywhere on the page** — no need to click a specific button; clicking anywhere on the suspended page resumes it
-- **Restore by Reload** — reloading the tab (keyboard shortcut or browser button) unsuspends it
+- **Favicon dimming**: the favicon of a suspended tab is visually dimmed to distinguish it from active tabs at a glance
+- **Restore by clicking anywhere on the page**: no need to click a specific button; clicking anywhere on the suspended page resumes it
+- **Restore by Reload**: reloading the tab (keyboard shortcut or browser button) unsuspends it
 
 ### Bug fixes
 
-- **Fixed:** Suspended tabs being blocked by Chrome when opened directly — for example, by a session restore tool
+- **Fixed:** Suspended tabs being blocked by Chrome when opened directly. For example, by a session restore tool
 - **Fixed:** Suspended tab favicons not loading on initial browser launch. Note: favicons must be in the browser cache to display correctly until a local favicon cache is implemented in a future release.
 
 ### Popup improvements
