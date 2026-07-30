@@ -1,6 +1,6 @@
 ---
 slug: tms-release-8-0-0-0
-title: "The Marvellous Suspender 8.0.0.0 — Manifest V3"
+title: "The Marvellous Suspender 8.0.0.0 - Manifest V3"
 date: 2025-07-28T08:00:48+02:00
 authors: [gioxx]
 tags: [release, tms]
@@ -18,7 +18,7 @@ The permission set has been updated to match what Manifest V3 requires and allow
 
 | Permission | Why |
 |---|---|
-| `alarms` | Replaces `setTimeout` for scheduling suspension — service workers cannot use timers across restarts |
+| `alarms` | Replaces `setTimeout` for scheduling suspension, service workers cannot use timers across restarts |
 | `favicon` | Replaces the deprecated `chrome://favicon/*` pattern |
 | `scripting` | Replaces content scripts for detecting unsaved forms and scroll position |
 | `tabGroups` | Enables saving and restoring tab group assignments |
