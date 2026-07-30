@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: "Tab Health"
-description: Complete reference for the Tab Health page — scanning for broken favicons and Tab Groups issues, and the automatic repair actions TMS offers.
+description: Complete reference for the Tab Health page, scanning for broken favicons and Tab Groups issues, and the automatic repair actions TMS offers.
 tags:
   - TMS
   - The Marvellous Suspender
@@ -14,7 +14,7 @@ tags:
 
 Open the Tab Health page from the extension popup or from **Tab Health** in the left sidebar (shown on every extension page). Available in Incognito windows too.
 
-Tab Health is a self-service diagnostic tool: it scans all of your currently open tabs, reports on the state of TMS's suspended tabs, and — when it finds something fixable — offers a one-click repair action.
+Tab Health is a self-service diagnostic tool: it scans all of your currently open tabs, reports on the state of TMS's suspended tabs, and when it finds something fixable, offers a one-click repair action.
 
 ---
 
@@ -45,16 +45,16 @@ A ✓ next to a row means that category found nothing wrong.
 
 ## Repair actions
 
-If the scan finds an issue, an action button appears below the results. TMS prioritizes issues in this order — only the highest-priority fixable issue is offered at a time:
+If the scan finds an issue, an action button appears below the results. TMS prioritizes issues in this order, only the highest-priority fixable issue is offered at a time:
 
 ### 1. Repair grouped tab(s)
-Highest priority. Detects tabs that belong to a Chrome Tab Group and were left broken after a browser restart — see [Broken Tab Groups after restart](#broken-tab-groups-after-restart) below. Clicking **Repair** re-creates each broken tab at its correct suspended URL, inside its original group, and removes the broken one.
+Highest priority. Detects tabs that belong to a Chrome Tab Group and were left broken after a browser restart, see [Broken Tab Groups after restart](#broken-tab-groups-after-restart) below. Clicking **Repair** re-creates each broken tab at its correct suspended URL, inside its original group, and removes the broken one.
 
 ### 2. Reload tab(s) with no favicon
 Suspended tabs whose favicon never loaded (usually because the page was suspended too quickly, before Chrome had cached the icon). Clicking **Reload** re-suspends those tabs, which typically re-triggers a correct favicon fetch.
 
 ### 3. Restore tab(s) with generic favicon
-Suspended tabs showing Chrome's default/generic icon instead of the site's real favicon — usually because the site's favicon couldn't be fetched at suspend time. Clicking **Restore** unsuspends the affected tab, reloads it (to let Chrome cache the real favicon), waits a moment, then re-suspends it automatically. Multiple tabs from the same hostname are batched, so only one representative tab per host needs to actually reload.
+Suspended tabs showing Chrome's default/generic icon instead of the site's real favicon, usually because the site's favicon couldn't be fetched at suspend time. Clicking **Restore** unsuspends the affected tab, reloads it (to let Chrome cache the real favicon), waits a moment, then re-suspends it automatically. Multiple tabs from the same hostname are batched, so only one representative tab per host needs to actually reload.
 
 If none of the above apply, the scan reports **All good** and no action button is shown.
 
@@ -69,7 +69,7 @@ Chrome and Brave have had bugs (see [TMS issue #369](https://github.com/gioxx/Ma
 
 Tab Health's **Repair grouped tab(s)** action fixes both cases on demand:
 - For the Chrome/Edge case, the broken tab still carries its suspended URL internally, so TMS simply recreates it in place, in the same group.
-- For the Brave case (where the URL is genuinely lost), TMS searches your recent [session history](./session-management#recent-sessions) for a matching tab — by comparing window order and tab position — and recovers the original suspended URL from there. If no match is found for a given tab, it is reported as **not recovered** so you know to check it manually; matched tabs are still recreated in the correct group.
+- For the Brave case (where the URL is genuinely lost), TMS searches your recent [session history](./session-management#recent-sessions) for a matching tab, by comparing window order and tab position, and recovers the original suspended URL from there. If no match is found for a given tab, it is reported as **not recovered** so you know to check it manually; matched tabs are still recreated in the correct group.
 
 :::note
 For related background on lost/disappearing tabs in general (not specific to Tab Groups), see [Recovering lost tabs](../tgs-recover-lost-tabs).
@@ -79,7 +79,7 @@ For related background on lost/disappearing tabs in general (not specific to Tab
 
 ## Copying a report for a bug report
 
-After a scan, a **Copy report** button appears. It copies your TMS version number, the full scan results, and the raw per-category counts to your clipboard as plain text — paste this directly into a [GitHub issue](https://github.com/gioxx/MarvellousSuspender/issues) so maintainers can see exactly what your scan found without you needing to describe it manually.
+After a scan, a **Copy report** button appears. It copies your TMS version number, the full scan results, and the raw per-category counts to your clipboard as plain text, paste this directly into a [GitHub issue](https://github.com/gioxx/MarvellousSuspender/issues) so maintainers can see exactly what your scan found without you needing to describe it manually.
 
 ![The "Copy results" button and its GitHub issue hint](./img/tab-health/03-copy-report.webp)
 
