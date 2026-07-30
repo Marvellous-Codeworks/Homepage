@@ -21,7 +21,7 @@ tags:
 
 ### Is TGD compatible with Chromium browsers?
 
-The primary distribution channels are the **Chrome Web Store** and **Microsoft Edge Add-ons**. For other Chromium-based browsers (Brave, Vivaldi, etc.), installation and policy support varies — verify case by case.
+The primary distribution channels are the **Chrome Web Store** and **Microsoft Edge Add-ons**. For other Chromium-based browsers (Brave, Vivaldi, etc.), installation and policy support varies, verify case by case.
 
 ### Is TGD free? Does it collect my data?
 
@@ -32,7 +32,7 @@ TGD is completely free and contains no analytics or tracking. Everything stays l
 | | Discard | Suspend |
 |---|---|---|
 | **How it works** | Uses the browser's native tab discard API to unload the tab from memory | Replaces the tab with a lightweight TGD-hosted page |
-| **Memory freed** | More — the browser fully unloads the tab | Less — a simple HTML page stays in memory |
+| **Memory freed** | More, the browser fully unloads the tab | Less, a simple HTML page stays in memory |
 | **Visual appearance** | Tab looks normal but reloads when activated | Tab shows a suspended page (customizable title prefix, favicon) |
 | **Best for** | Maximum memory savings | Visual distinction and customization |
 
@@ -60,16 +60,16 @@ Several settings can prevent a tab from being processed automatically:
 
 ### How do I prevent a specific tab from being discarded?
 
-- **Right-click the tab → Pause discarding this tab** — pauses auto-discard for that tab until the next reload
-- **Pin the tab** — pinned tabs are excluded by default (if the option is enabled)
+- **Right-click the tab → Pause discarding this tab**: pauses auto-discard for that tab until the next reload
+- **Pin the tab**: pinned tabs are excluded by default (if the option is enabled)
 - **Add the URL to the whitelist** in Settings → General → Whitelist
 
 ### How do I discard or suspend a tab manually?
 
 From the extension popup, or via keyboard shortcuts:
 
-- `Ctrl+Shift+D` — Discard the active tab
-- `Ctrl+Shift+S` — Suspend the active tab
+- `Ctrl+Shift+D`: Discard the active tab
+- `Ctrl+Shift+S`: Suspend the active tab
 
 See [Keyboard shortcuts](./keyboard-shortcuts) for the full list and instructions on reassigning them.
 
@@ -83,7 +83,7 @@ See [Keyboard shortcuts](./keyboard-shortcuts) for the full list and instruction
 
 ### Why does TGD need the `tabs` permission?
 
-TGD needs to read and manage your open tabs — this is the core permission that makes discarding and suspending possible.
+TGD needs to read and manage your open tabs, this is the core permission that makes discarding and suspending possible.
 
 ### Why does TGD need the `favicon` permission?
 
