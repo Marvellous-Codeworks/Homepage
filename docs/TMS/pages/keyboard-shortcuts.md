@@ -24,18 +24,18 @@ TMS ships with one pre-assigned shortcut. All other commands have no default key
 | Command | Default key | Description |
 |---|---|---|
 | Toggle current tab | `Ctrl+Shift+S` | Suspend the active tab, or unsuspend it if already suspended |
-| Pause current tab | — | Toggle the "paused" state for the current tab (excluded from auto-suspend until next reload) |
-| Suspend selected tabs | — | Suspend all tabs currently selected in the tab strip |
-| Unsuspend selected tabs | — | Unsuspend all tabs currently selected in the tab strip |
-| Soft suspend active window | — | Suspend all inactive tabs in the current window |
-| Force suspend active window | — | Suspend all tabs in the current window, including the active one |
-| Unsuspend active window | — | Unsuspend all tabs in the current window |
-| Soft suspend all windows | — | Suspend all inactive tabs across every open window |
-| Force suspend all windows | — | Suspend all tabs across every open window |
-| Unsuspend all windows | — | Unsuspend all tabs across every open window |
-| Open Session Manager | — | Open the Session Management page directly |
+| Pause current tab | - | Toggle the "paused" state for the current tab (excluded from auto-suspend until next reload) |
+| Suspend selected tabs | - | Suspend all tabs currently selected in the tab strip |
+| Unsuspend selected tabs | - | Unsuspend all tabs currently selected in the tab strip |
+| Soft suspend active window | - | Suspend all inactive tabs in the current window |
+| Force suspend active window | - | Suspend all tabs in the current window, including the active one |
+| Unsuspend active window | - | Unsuspend all tabs in the current window |
+| Soft suspend all windows | - | Suspend all inactive tabs across every open window |
+| Force suspend all windows | - | Suspend all tabs across every open window |
+| Unsuspend all windows | - | Unsuspend all tabs across every open window |
+| Open Session Manager | - | Open the Session Management page directly |
 
-TMS also has its own read-only copy of this list on the **Keyboard shortcuts** page in the sidebar, with a **Change shortcuts** button that jumps straight to `chrome://extensions/shortcuts`. Labels follow your [language setting](./settings#language) — shown here in Italian:
+TMS also has its own read-only copy of this list on the **Keyboard shortcuts** page in the sidebar, with a **Change shortcuts** button that jumps straight to `chrome://extensions/shortcuts`. Labels follow your [language setting](./settings#language), shown here in Italian:
 
 ![The Keyboard shortcuts page, shown here with the language set to Italian](./img/keyboard-shortcuts/01-shortcuts-list.webp)
 
