@@ -1,6 +1,6 @@
 ---
 slug: road-to-tms9-launch
-title: "Road to TMS 9: we made it, and it's rolling out Monday"
+title: "Road to TMS 9: we made it, and it's rolling out Monday!"
 description: "TMS 9 has cleared Google's review. Starting Monday, August 3rd, the new version begins rolling out on the Chrome Web Store. A look back at the ride, the chats with Rob, the community that showed up, the new site, and what actually changes for you."
 date: 2026-07-31T00:00:00+01:00
 authors: [gioxx]
@@ -9,11 +9,11 @@ tags: [tms, road-to-tms9, release, announcement]
 
 import suspendySummer from './suspendy-summer-vacation.webp';
 
-Five weeks ago we opened this series with [a new look for a new era](/blog/road-to-tms9-visual-redesign). Google just cleared [v9.0.0](https://github.com/gioxx/MarvellousSuspender/releases/tag/untagged-ac2f89701b50b29f28e6) for review, and starting **Monday morning, August 3rd**, the rollout to the Chrome Web Store begins. This is the last stop on the road.
+Five weeks ago we opened this series with [a new look for a new era](/blog/road-to-tms9-visual-redesign). Google just cleared v9.0.0 for review, and starting **Monday morning, August 3rd**, the rollout to the Chrome Web Store begins. This is the last stop on the road.
 
 <img src={suspendySummer} alt="Suspendy Guy in Hawaiian shirt, sunglasses, and sandals, holding a tropical cocktail" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
 
-It's also pushing 40°C outside as we write this, summer in full swing, and yes, 40°C in Italy is exactly as absurd as it sounds. Wherever you are, we hope you get a good stretch of vacation out of it. We won't really be taking one ourselves, but we'll admit to easing off the throttle a little.
+It's also pushing about 40°C outside as we write this, summer in full swing, and yes, 40°C in Italy is exactly as absurd as it sounds. Wherever you are, we hope you get a good stretch of vacation out of it. We won't really be taking one ourselves, but we'll admit to easing off the throttle a little.
 
 {/* truncate */}
 
