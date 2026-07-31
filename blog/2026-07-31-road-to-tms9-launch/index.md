@@ -19,27 +19,31 @@ It's also pushing about 40°C outside as we write this, summer in full swing, an
 
 ## What actually shipped
 
-Session backup and restore, local or Google Drive, on a schedule or on demand, multi-device aware. A Tab Health page that scans your suspended tabs and repairs the Tab Groups restart bug on Chrome, Edge, and Brave with one click. A News feed that pulls straight from this blog into the extension's sidebar. A visual redesign that finally makes every settings page look like it belongs to the same product. A narrower, less scary Google Drive permission. Sixteen languages brought back up to parity after being left behind for who knows how long.
+- **Session backup and restore** (arguably the single most requested feature, since the dawn of time), local or Google Drive, on a schedule or on demand, multi-device aware.
+- A Tab Health page that scans your suspended tabs and repairs the Tab Groups restart bug on Chrome, Edge, and Brave with one click (the underlying bug is fixed now, but we kept the tooling around and available on demand, just in case).
+- A News feed that pulls straight from this blog into the extension's sidebar.
+- A visual redesign that finally makes every settings page look like it belongs to the same product.
+- Sixteen languages brought back up to parity after being left behind for who knows how long.
 
 None of that happened in a straight line, and none of it happened alone.
 
 ## The chats with Rob
 
-Rob and I don't work in the same office, the same country, or even close to the same timezone half the time. Most of TMS 9 got decided in a chat window, at hours that made sense for neither of us, arguing about whether a permission scope was too aggressive, whether a setting needed a tooltip, whether "Restore from backup" should live under Sessions or Backup. Small questions, but the kind that decide whether an extension feels considered or just shipped.
+Rob and I don't work in the same office, the same country, or even close to the same timezone half the time. Most of TMS 9 got decided in a Slack channel, at hours that made sense for neither of us, arguing about whether a permission scope was too aggressive, whether a setting needed a tooltip, whether "Restore from backup" should live under Sessions or Backup. Small questions, but the kind that decide whether an extension feels considered or just shipped.
 
-The Great-er Tab Discarder and The Marvellous Suspender are separate projects with separate codebases, but Marvellous Codeworks only works because there are two of us pulling in the same direction, checking each other's blind spots, and occasionally telling the other one an idea is bad before it ships. TMS 9 is better for it.
+The Great-er Tab Discarder (TGD) and The Marvellous Suspender (TMS) are separate projects with separate codebases, but Marvellous Codeworks only works because there are two of us pulling in the same direction, checking each other's blind spots, and occasionally telling the other one an idea is bad before it ships. TMS 9 is better for it, and we hope to do the same for TGD soon.
 
 ## The community that showed up
 
-TMS 9 also has two first-time contributors in the changelog: [@MatrixNeoKozak](https://github.com/MatrixNeoKozak), who refactored the storage layer to drop unnecessary JSON serialization, and [@iGhost](https://github.com/iGhost), who added the option to preserve YouTube playback position on suspend, a small feature, requested and built by someone who actually hit the problem. That is exactly how an open-source project is supposed to grow: not just bug reports, but pull requests from people who decided to fix the thing themselves.
+TMS 9 also has two first-time contributors in the changelog: [@MatrixNeoKozak](https://github.com/MatrixNeoKozak), who refactored the storage layer to drop unnecessary JSON serialization, and [@iGhost](https://github.com/iGhost), who added the option to preserve YouTube playback position on suspend, a small feature, requested and built by someone who actually hit the problem (something I never personally needed, for what it's worth). That is exactly how an open-source project is supposed to grow: not just bug reports, but pull requests from people who decided to fix the thing themselves.
 
-On top of that, sixteen locales got AI-assisted translation passes to close gaps that had been sitting there for versions. They are not perfect. If you read TMS in your language and something sounds off, [Crowdin](https://crowdin.com/project/tms) is open and corrections from native speakers are exactly what closes that gap for good.
+On top of that, sixteen locales got AI-assisted translation passes to close gaps that had been sitting there for versions (Claude had free rein here). They are not perfect. If you read TMS in your language and something sounds off, [Crowdin](https://crowdin.com/project/tms) is open and corrections from native speakers are exactly what closes that gap for good.
 
 ## Reporting an issue without a GitHub account
 
 For years, the only way to tell us something was broken was to open a GitHub issue, which meant a GitHub account, which meant a wall a lot of people simply weren't willing to climb over just to report a bug. We kept hearing about problems secondhand, in reviews, in Reddit threads, never where we could actually act on them.
 
-[marvellouscode.works/tms/report](https://marvellouscode.works/tms/report) fixes that. Fill in a form, no sign-up, no account, and it opens a proper GitHub issue on your behalf, correctly labeled, with the fields we actually need to reproduce the problem. You get a status link back to follow along, we get a real, actionable report instead of a one-star review that just says "stopped working."
+[marvellouscode.works/tms/report](https://marvellouscode.works/tms/report) aims to fix that. Fill in a form, no sign-up, no account, and it opens a proper GitHub issue on your behalf, correctly labeled, with the fields we actually need to reproduce the problem. You get a status link back to follow along, we get a real, actionable report instead of a one-star review that just says "stopped working."
 
 And on that note: we do read everything, including what shows up directly on the Chrome Web Store. Star ratings, written reviews, support requests left in that little review box, all of it gets read. We keep an eye on GitHub Issues specifically because that is where we actually track and act on things, verifying odd behavior, following up on requests, closing things out once they're fixed, but a review left on the Store is not shouting into a void either.
 
@@ -51,7 +55,7 @@ The web report form is experimental. It exists to lower the barrier for people w
 
 The old TMS wiki lived on the GitHub repo, half-finished, out of date in places, and honestly not the kind of thing you'd send someone to if you wanted them to actually understand the extension. It's disabled now.
 
-In its place: [kb.marvellouscode.works/docs](/docs/intro), written from the ground up, page by page, for TMS 9 specifically. Every settings page has its own article, Settings, Sessions, Backup, Tab Health, Quick Actions, Keyboard Shortcuts, News, About, explaining what every toggle actually does, not just what it's labeled. There's a dedicated page on [permissions](/docs/TMS/permissions), spelling out why TMS asks for what it asks for, and what changed with the narrower Drive scope in this release. FAQ included. Nothing hidden in a stale wiki page nobody updated since 2019.
+In its place: [kb.marvellouscode.works/docs](/docs/intro), built from the ground up on Docusaurus, page by page, primarily for TMS 9 (though really designed to cover everything that ends up under the Marvellous Codeworks umbrella). Every settings page has its own article, Settings, Sessions, Backup, Tab Health, Quick Actions, Keyboard Shortcuts, News, About, explaining what every toggle actually does, not just what it's labeled. There's a dedicated page on [permissions](/docs/TMS/permissions), spelling out why TMS asks for what it asks for, and what changed with the narrower Drive scope in this release. FAQ included. Nothing hidden in a stale wiki page nobody updated since 2019.
 
 We built it, page by page, deciding what actually needed explaining versus what was obvious enough to skip. The `marvellouscode.works` domain has actually been sitting registered for almost a year now, it just took weeks and weeks of actual writing, restructuring, and rewriting to turn it into the site, the docs, and the report flow you can use today.
 
