@@ -2,7 +2,7 @@
 slug: tms9-public-permissions-faq
 title: "TMS 9 is public now: about that permissions dialog, and where your sessions went"
 description: "TMS 9 has finished rolling out to everyone. Some of you hit a scary re-enable dialog, some raised sharp technical questions about backup permissions, some lost sessions to an unrelated Chrome bug. Here's what's actually going on, and what's landing in 9.0.1."
-date: 2026-08-03T00:00:00+01:00
+date: 2026-08-03T21:30:00+01:00
 authors: [gioxx]
 tags: [tms, release, announcement]
 ---
