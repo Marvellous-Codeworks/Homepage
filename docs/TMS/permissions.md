@@ -14,7 +14,7 @@ tags:
 TMS requests only the permissions it genuinely needs to function. This page explains what each permission does and why it is required.
 
 :::info[Current version]
-The permission list below reflects TMS **9.x** (Manifest V3). See the [legacy permissions](#legacy-permissions-pre-800) section for what changed compared to 7.x, and the [changes since 8.x](#new-in-9x-downloads-identity--google-drive) section for what TMS 9 adds on top of 8.x.
+The permission list below reflects TMS **9.0.1+** (Manifest V3). See the [legacy permissions](#legacy-permissions-pre-800) section for what changed compared to 7.x, and the [changes since 8.x](#new-in-9x-downloads-identity--google-drive) section for what TMS 9 adds on top of 8.x, including the on-demand permission model introduced in 9.0.1.
 :::
 
 ---
@@ -47,11 +47,11 @@ Allows TMS to run scripts in the context of web pages. Used to:
 ### `tabGroups`
 Grants access to Chrome's Tab Groups API. Used to save and restore tab group assignments (name, color, collapsed state) when exporting/importing sessions, restoring backups, or upgrading the extension.
 
-### `downloads`
-Used by the [Backup & Sync](./pages/backup-sync) feature to save session backup files (`tms-session-*.json`) to a `tms-backups/` subfolder inside your Downloads folder when the backup destination is set to **Local**, and to track/rotate those files so old backups are cleaned up automatically. TMS never reads the contents of your Downloads folder beyond the files it wrote itself.
+### `downloads` *(optional, requested on demand since 9.0.1)*
+Used by the [Backup & Sync](./pages/backup-sync) feature to save session backup files (`tms-session-*.json`) to a `tms-backups/` subfolder inside your Downloads folder when the backup destination is set to **Local**, and to track/rotate those files so old backups are cleaned up automatically. TMS never reads the contents of your Downloads folder beyond the files it wrote itself. Chrome only asks you to grant this the moment you toggle **Enable automatic backup** on, not at install or update time. If you never enable local backup, TMS never requests it.
 
-### `identity`
-Used exclusively by the optional [Google Drive backup destination](./pages/backup-sync#google-drive). It lets TMS obtain an OAuth token via `chrome.identity.getAuthToken()` to authenticate with your Google account. TMS never sees your Google password, the token exchange is handled entirely by Chrome.
+### `identity` *(optional, requested on demand since 9.0.1)*
+Used exclusively by the optional [Google Drive backup destination](./pages/backup-sync#google-drive). It lets TMS obtain an OAuth token via `chrome.identity.getAuthToken()` to authenticate with your Google account. TMS never sees your Google password, the token exchange is handled entirely by Chrome. Chrome only asks you to grant this when you click **Connect** to link a Google account, not at install or update time.
 
 ### Host permissions (`http://*/*`, `https://*/*`)
 Required by the `scripting` permission, Chrome enforces that host permissions must be declared for any page where content scripts will run.
@@ -71,7 +71,13 @@ TMS 9 introduces optional multi-device session backup (see [Backup & Sync](./pag
 | `identity` | Authenticating with Google Drive (OAuth token only, no password access) |
 | `drive.appdata` (OAuth scope) | Storing backup files in a private, hidden Drive folder |
 
-Both `downloads` and `identity` are declared in the manifest but only become *active* once you enable automatic backups in **Backup & Sync**. If you never enable that feature, TMS requests no Drive authentication and performs no downloads.
+:::info[Since 9.0.1: on-demand instead of upfront]
+In 9.0.0, `downloads` and `identity` were declared as regular (required) permissions, so Chrome asked for both at install/update time even if you never used backup, triggering the "extension disabled, needs new permissions" prompt for everyone. Starting with **9.0.1**, both are declared as `optional_permissions` instead: Chrome only prompts for `downloads` the moment you toggle **Enable automatic backup** on, and only prompts for `identity` when you click **Connect** to link a Google account. If you never turn either feature on, TMS never requests them, and nothing shows up in your permissions list for them at all.
+
+If you already had backup enabled under 9.0.0 (and had therefore already granted these), updating to 9.0.1 does not revoke them or prompt you again, Chrome carries over permissions you already granted when a manifest moves them from required to optional.
+
+9.0.1 also adds a one-time in-app notice (shown on the Settings and Backup & Sync pages) explaining this change with a link back to this page, a persistent reminder on the Backup & Sync page pointing here as well, and an opt-out for the daily [News feed](./pages/news-feed#disabling-the-news-feed) background request, previously always-on with no toggle.
+:::
 
 ---
 
@@ -91,8 +97,8 @@ TMS 7.x (Manifest V2) used a different permission model:
 | `favicon` | 🆕 Added | Replaces deprecated `chrome://favicon/*` |
 | `scripting` | 🆕 Added | Replaces content scripts |
 | `tabGroups` | 🆕 Added | New feature: Tab Group support |
-| `downloads` | 🆕 Added in 9.x | Local session backups |
-| `identity` | 🆕 Added in 9.x | Google Drive authentication (backup destination) |
+| `downloads` | 🆕 Added in 9.x | Local session backups. Required permission in 9.0.0, moved to optional/on-demand in 9.0.1 |
+| `identity` | 🆕 Added in 9.x | Google Drive authentication (backup destination). Required permission in 9.0.0, moved to optional/on-demand in 9.0.1 |
 
 ---
 

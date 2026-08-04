@@ -27,7 +27,9 @@ On each run, TMS backs up your **current session**: every open window, its tabs 
 
 ![Backup page with automatic backup disabled, the default state](./img/backup-sync/00-disabled.webp)
 
-Toggle **Enable automatic backup**. Once enabled, four settings become available:
+*Since 9.0.1, this page shows a note reminding you that backup is off, with an option to snooze the reminder for 10 days or dismiss it permanently, see [Backup activation nudge](#backup-activation-nudge) below.*
+
+Toggle **Enable automatic backup**. Since **9.0.1**, doing so triggers Chrome's permission prompt for `downloads` right at that moment, not before, see [Permissions](../permissions#new-in-9x-downloads-identity--google-drive) for why. If you decline the prompt, the toggle reverts and nothing is enabled. Once enabled (and the permission granted), four settings become available:
 
 | Setting | Description |
 |---|---|
@@ -48,6 +50,16 @@ If a backup produces an empty result (no open windows/tabs to save), TMS silentl
 
 ![Automatic backup settings in dark theme](./img/backup-sync/01-auto-backup-settings-dark.webp)
 
+### Backup activation nudge
+
+*Added in 9.0.1.* If you've never turned on automatic backup, TMS shows a quiet reminder rather than nagging you with repeated pop-ups:
+
+- A small amber badge on the toolbar icon.
+- A banner in the extension popup, clicking it opens this page.
+- The note shown above, on this page.
+
+Each surface offers **Remind me in 10 days**, which snoozes the reminder (badge, popup banner, and this note all reappear automatically once the snooze expires), or, from this page only, a permanent **I'm not interested, stop reminding me** checkbox. Once you enable automatic backup, or check that box, all three surfaces stay hidden until the corresponding condition changes again. Nothing about this reminder collects data or phones home, it only reads your own local `Enable automatic backup` setting.
+
 ### Local backups
 Files are written to `Downloads/tms-backups/tms-session-{deviceId}-{timestamp}.json`. The `{deviceId}` is a random 8-character identifier generated once per browser installation and stored locally, it exists purely so that two browsers writing to the same Downloads folder (e.g. Chrome and Brave on the same machine) never overwrite each other's files. Rotation keeps only the newest **Max backups per device** files for *this* installation.
 
@@ -56,7 +68,7 @@ Switching **Backup destination** to Google Drive before connecting an account sh
 
 ![Backup destination set to Google Drive, not yet connected](./img/backup-sync/01b-drive-not-connected.webp)
 
-Click **Connect** to sign in with your Google account through a standard Google OAuth consent flow, choose the account, then confirm access:
+Click **Connect**. Since **9.0.1**, this first triggers Chrome's permission prompt for `identity`, requested at this point rather than upfront, before continuing into the standard Google OAuth consent flow: choose the account, then confirm access:
 
 ![Google's "Choose an account" screen for the TMS Drive connection](./img/backup-sync/07-google-oauth-account-chooser.webp)
 
@@ -76,6 +88,9 @@ The **Disconnect** button revokes the OAuth token (`chrome.identity.removeCached
 
 #### If Drive authentication fails
 If a scheduled Drive backup fails because the connection expired or was revoked elsewhere, TMS shows a small red badge on the toolbar icon and a banner in the popup. Clicking the banner opens this page so you can reconnect.
+
+#### Why a local file can still appear with Drive selected
+On browser shutdown, TMS writes an emergency local backup first regardless of your chosen destination, a Drive upload isn't reliable in that narrow shutdown window since the service worker can be killed mid-request. If your destination is Drive, that local file is queued and uploaded on the next startup, then automatically removed once the upload succeeds. Seeing a file appear locally even in Drive-only mode is expected behavior, not a bug, this is now explained directly on the page too, right below the multi-device rotation note.
 
 ### Switching destination from Drive to Local
 If you switch the destination from **Google Drive** to **Local**, a dialog offers to import your most recent Drive backup directly into [Saved sessions](./session-management#saved-sessions), a safety net so you don't lose access to that data just because you stopped using Drive. If Drive was never connected, or has no backups, this dialog is skipped.
