@@ -1,3 +1,5 @@
 .DS_Store
 .tokensave
 node_modules/
+.docusaurus/
+build/
