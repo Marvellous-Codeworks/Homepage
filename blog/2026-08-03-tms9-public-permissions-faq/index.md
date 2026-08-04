@@ -1,7 +1,7 @@
 ---
 slug: tms9-public-permissions-faq
 title: "TMS 9 is public now: about that permissions dialog, and where your sessions went"
-description: "TMS 9 has finished rolling out to everyone. Some of you hit a scary re-enable dialog, some lost sessions to an unrelated Chrome bug, and some left reviews we want to answer directly. Here's what's actually going on."
+description: "TMS 9 has finished rolling out to everyone. Some of you hit a scary re-enable dialog, some raised sharp technical questions about backup permissions, some lost sessions to an unrelated Chrome bug. Here's what's actually going on, and what's landing in 9.0.1."
 date: 2026-08-03T00:00:00+01:00
 authors: [gioxx]
 tags: [tms, release, announcement]
@@ -30,6 +30,19 @@ Two of the permissions listed, `downloads` and `identity`, are new in 9.x. Both 
 Full breakdown, including exactly what changed since 8.x, is on the [permissions page](/docs/TMS/permissions#new-in-9x-downloads-identity--google-drive).
 
 **The important part: both permissions sit dormant until you actually turn on automatic backups in Backup & Sync.** If you never enable that feature, TMS requests no Drive authentication and writes nothing to Downloads. We're aware that Chrome asks for the permission up front regardless, at install/update time, not at first use, which is exactly the kind of thing that reads as scarier than it is. We hear that, and we're working on a setting to opt out of backups and their reminders entirely, which should let us drop these permissions for anyone who doesn't want the feature. That's not shipped yet, it's actively in progress, and we'll cover it here once it lands.
+
+## The deeper questions, and what's landing in 9.0.1
+
+[Issue #411](https://github.com/gioxx/MarvellousSuspender/issues/411) went further than "why the new permissions," with some sharper technical points worth answering here too, not just in a GitHub thread:
+
+- **`downloads` is requested unconditionally, even if you never enable local backup.** Fair. It's a static manifest permission right now instead of one requested at runtime when you actually turn on local auto-backup. Moving it to on-demand is going into 9.0.1, so most people who don't use backups won't see this prompt at all.
+- **Backup files are plain JSON, and base64 isn't encryption.** Correct, base64 there only builds a `data:` URL so a service worker can hand the file to `chrome.downloads.download()` (blob URLs don't survive service worker restarts), it was never meant as protection. Worth noting: it's the same level of protection the manual "Export session" feature has had since 2017, so this isn't a new risk 9.0.0 introduced. Optional passphrase encryption for backup content is a reasonable ask and it's on the list.
+- **A Drive-only configuration can still write a local file.** Also correct. On browser shutdown, TMS runs an emergency backup that always writes locally first, because a Drive upload in that shutdown window isn't reliable, the service worker can get killed mid-request. If your destination is Drive, that file gets queued and uploaded on next startup. A deliberate reliability trade-off, but not currently explained anywhere in the UI. That's getting a note, plus cleanup of the local copy once the queued Drive upload succeeds.
+- **A daily request to `kb.marvellouscode.works/blog/rss.xml`.** Yes, an alarm every 24h feeding the sidebar News page. The host is already declared in the manifest, nothing hidden, but there's no way to turn it off today. A toggle is coming.
+
+One more thing worth admitting straight: the permissions page and the posts covering this were published before 9.0.0 went live, but nowhere the extension itself points to them. That's the actual gap, not the timing. Going forward, whenever a release changes permissions, the options page and changelog will link directly to what changed and why, instead of relying on people finding the blog on their own.
+
+None of this changes what TMS does with your data today, nothing leaves your machine except to your own Drive `appdata` folder, but the scoping and the missing opt-outs were legitimate gaps, and 9.0.1 is where they get closed.
 
 ## "It requires too many permissions now, wtf?"
 
