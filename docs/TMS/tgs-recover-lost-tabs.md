@@ -9,6 +9,10 @@ description: Archived guide from the original The Great Suspender project on rec
 This page preserves the content of [deanoemcke/thegreatsuspender#526](https://github.com/deanoemcke/thegreatsuspender/issues/526), the official recovery guide from the original The Great Suspender project. The recovery steps described here still apply to The Marvellous Suspender.
 :::
 
+:::tip[Different scenario?]
+If the browser flagged TMS itself as "corrupted" and offered to repair it, and your sessions/settings vanished afterwards even though the extension is still installed, see [Chrome/Edge extension corruption & repair](./extension-repair-recovery) instead, that's a different failure mode from the one covered on this page.
+:::
+
 ## Overview
 
 - [Why do my tabs disappear when the extension updates or is removed?](#why-do-my-tabs-disappear-when-the-extension-updates-or-is-removed)

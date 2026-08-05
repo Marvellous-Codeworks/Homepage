@@ -147,3 +147,4 @@ The date of the last Drive settings backup is shown next to the section title on
 - [Session management](./session-management): TMS's always-on local session history, independent of this page
 - [Permissions](../permissions#new-in-9x-downloads-identity--google-drive): exactly what the `downloads` and `identity` permissions and the `drive.appdata` OAuth scope allow
 - [Diagnostic page](./diagnostic-page): shows this device's backup ID and name for troubleshooting
+- [Chrome/Edge extension corruption & repair](../extension-repair-recovery): recovering sessions from raw browser data when no backup exists and the browser resets TMS's local storage
