@@ -63,6 +63,11 @@ Each surface offers **Remind me in 10 days**, which snoozes the reminder (badge,
 ### Local backups
 Files are written to `Downloads/tms-backups/tms-session-{deviceId}-{timestamp}.json`. The `{deviceId}` is a random 8-character identifier generated once per browser installation and stored locally, it exists purely so that two browsers writing to the same Downloads folder (e.g. Chrome and Brave on the same machine) never overwrite each other's files. Rotation keeps only the newest **Max backups per device** files for *this* installation.
 
+#### Save dialog popping up on every backup
+TMS saves local backups via `chrome.downloads.download()` with `saveAs: false`, which normally writes the file silently with no prompt. If Chrome's own setting **"Ask where to save each file before downloading"** (`chrome://settings/downloads`) is turned on, Chrome overrides that and shows its save-location dialog anyway, for every download, TMS included. This is Chrome's behavior, not something an extension can suppress or opt out of.
+
+If scheduled backups are popping up a save window and stealing focus, turn that Chrome setting off (and set a default download folder) so backups save silently, or switch **Backup destination** to Google Drive, which doesn't go through the downloads dialog at all.
+
 ### Google Drive
 Switching **Backup destination** to Google Drive before connecting an account shows a **Connect Google Account** prompt in place of the backup/disconnect buttons:
 
