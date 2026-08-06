@@ -14,54 +14,74 @@ tags:
 TMS requests only the permissions it genuinely needs to function. This page explains what each permission does and why it is required.
 
 :::info[Current version]
-The permission list below reflects TMS **9.0.1+** (Manifest V3). See the [legacy permissions](#legacy-permissions-pre-800) section for what changed compared to 7.x, and the [changes since 8.x](#new-in-9x-downloads-identity--google-drive) section for what TMS 9 adds on top of 8.x, including the on-demand permission model introduced in 9.0.1.
+The permission list below reflects TMS **9.0.1+** (Manifest V3). See [What changed in 9.x](#what-changed-in-9x) for the on-demand permission model introduced in 9.0.1, and [Legacy permissions (pre-8.0.0)](#legacy-permissions-pre-800) for what changed compared to 7.x.
 :::
 
 ---
 
 ## Current permissions (v9.x)
 
-### `tabs`
+### Required permissions
+
+These are declared as regular permissions and are granted automatically when TMS is installed or updated.
+
+#### Tabs
+
 Grants access to the list of open tabs and their properties (URL, title, active state, pinned state, group membership). This is the core permission that makes suspension possible. Without it, TMS cannot read or manipulate tabs.
 
-### `storage` + `unlimitedStorage`
-Used to persist your settings, the never-suspend list, favicon cache, and session data. `unlimitedStorage` removes the default 5 MB cap so that large sessions with many tabs can be saved reliably.
+#### Storage and unlimited storage
 
-### `history`
+`storage` + `unlimitedStorage` are used to persist your settings, the never-suspend list, favicon cache, and session data. `unlimitedStorage` removes the default 5 MB cap so that large sessions with many tabs can be saved reliably.
+
+#### History
+
 When a tab is unsuspended, TMS removes the suspended-page URL from the browser history so you don't see `chrome-extension://…` entries in your history after restoring tabs.
 
-### `contextMenus`
-Adds TMS commands to the right-click context menu on tabs (suspend, unsuspend, pause, never-suspend list). This permission is optional, you can disable the context menu entries in **Settings → General**.
+#### Context menus
 
-### `alarms`
+`contextMenus` adds TMS commands to the right-click context menu on tabs (suspend, unsuspend, pause, never-suspend list). This permission is optional to use, you can disable the context menu entries in **Settings → General**.
+
+#### Alarms
+
 Manifest V3 extensions cannot use `setTimeout` reliably across service worker restarts. `alarms` provides the scheduling mechanism that TMS uses to check for tabs that have exceeded their configured inactivity timeout, to run the [automatic backup schedule](./pages/backup-sync), and to periodically refresh the [News](./pages/news-feed) feed.
 
-### `favicon`
+#### Favicon
+
 Reads the favicon of the page being suspended so it can be displayed on the suspended tab page. This replaces the older (deprecated) `chrome://favicon/*` host permission.
 
-### `scripting`
+#### Scripting
+
 Allows TMS to run scripts in the context of web pages. Used to:
 - Detect unsaved form data before suspending
 - Read and store the page's scroll position so it can be restored when you unsuspend
 
-### `tabGroups`
-Grants access to Chrome's Tab Groups API. Used to save and restore tab group assignments (name, color, collapsed state) when exporting/importing sessions, restoring backups, or upgrading the extension.
+#### Tab groups
 
-### `downloads` *(optional, requested on demand since 9.0.1)*
+`tabGroups` grants access to Chrome's Tab Groups API. Used to save and restore tab group assignments (name, color, collapsed state) when exporting/importing sessions, restoring backups, or upgrading the extension.
+
+#### Host permissions
+
+`http://*/*` and `https://*/*` are required by the `scripting` permission, Chrome enforces that host permissions must be declared for any page where content scripts will run.
+
+### Optional permissions (requested on demand)
+
+These are declared as `optional_permissions` and are **not** requested at install or update time. Chrome only prompts for them the moment you actually turn on the related feature.
+
+#### Downloads
+
 Used by the [Backup & Sync](./pages/backup-sync) feature to save session backup files (`tms-session-*.json`) to a `tms-backups/` subfolder inside your Downloads folder when the backup destination is set to **Local**, and to track/rotate those files so old backups are cleaned up automatically. TMS never reads the contents of your Downloads folder beyond the files it wrote itself. Chrome only asks you to grant this the moment you toggle **Enable automatic backup** on, not at install or update time. If you never enable local backup, TMS never requests it.
 
-### `identity` *(optional, requested on demand since 9.0.1)*
+#### Identity
+
 Used exclusively by the optional [Google Drive backup destination](./pages/backup-sync#google-drive). It lets TMS obtain an OAuth token via `chrome.identity.getAuthToken()` to authenticate with your Google account. TMS never sees your Google password, the token exchange is handled entirely by Chrome. Chrome only asks you to grant this when you click **Connect** to link a Google account, not at install or update time.
 
-### Host permissions (`http://*/*`, `https://*/*`)
-Required by the `scripting` permission, Chrome enforces that host permissions must be declared for any page where content scripts will run.
+#### Google API OAuth scope: drive.appdata
 
-### OAuth scope: `drive.appdata`
 Declared in `manifest.json` under `oauth2.scopes`, this is not a Chrome permission but a Google API scope requested when you connect Google Drive. It grants access **only** to a hidden, app-specific folder (`appDataFolder`) that is invisible in the regular Google Drive UI and inaccessible to any other app. TMS cannot see, list, or touch any other file in your Drive. Because `drive.appdata` is a narrow, non-sensitive scope, connecting it does not require Google's OAuth verification process, any Google account can use it without restriction.
 
 ---
 
-## New in 9.x: downloads, identity & Google Drive
+## What changed in 9.x
 
 TMS 9 introduces optional multi-device session backup (see [Backup & Sync](./pages/backup-sync) for full details). This is the only functional area in 9.x that requests new permissions over 8.x:
 

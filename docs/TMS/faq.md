@@ -105,7 +105,7 @@ Only to remove suspended-tab URLs (`chrome-extension://…`) from your history w
 
 ### Why does TMS ask for the `downloads` and `identity` permissions?
 
-Both were added in TMS 9 for the optional [Backup & Sync](./pages/backup-sync) feature: `downloads` lets TMS save local backup files to your Downloads folder, and `identity` lets TMS authenticate with Google Drive if you choose that as your backup destination. Since **9.0.1**, both are requested on demand, Chrome only asks for `downloads` when you actually toggle on automatic backup, and only asks for `identity` when you click **Connect** to link a Google account, instead of being requested upfront at install/update time. If you never use either feature, TMS never requests them. See [Permissions → New in 9.x](./permissions#new-in-9x-downloads-identity--google-drive).
+Both were added in TMS 9 for the optional [Backup & Sync](./pages/backup-sync) feature: `downloads` lets TMS save local backup files to your Downloads folder, and `identity` lets TMS authenticate with Google Drive if you choose that as your backup destination. Since **9.0.1**, both are requested on demand, Chrome only asks for `downloads` when you actually toggle on automatic backup, and only asks for `identity` when you click **Connect** to link a Google account, instead of being requested upfront at install/update time. If you never use either feature, TMS never requests them. See [Permissions → What changed in 9.x](./permissions#what-changed-in-9x).
 
 ### I enabled automatic backup under TMS 9.0.0. Do I need to redo anything after updating to 9.0.1?
 
