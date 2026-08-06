@@ -72,7 +72,7 @@ Automatic restore points that TMS creates on its own, most recent first. Use the
 
 Each entry behaves exactly like a current session (expand, Reload, Resuspend, Export, Save, Delete), the only difference is *how* it was created.
 
-See also: [Recovering lost tabs](../tgs-recover-lost-tabs) for a deeper recovery walkthrough, including how to search `chrome://history` if a tab isn't in any recorded session.
+See also: [Recovering lost tabs](../troubleshooting/tgs-recover-lost-tabs) for a deeper recovery walkthrough, including how to search `chrome://history` if a tab isn't in any recorded session.
 
 ---
 

@@ -72,7 +72,7 @@ Tab Health's **Repair grouped tab(s)** action fixes both cases on demand:
 - For the Brave case (where the URL is genuinely lost), TMS searches your recent [session history](./session-management#recent-sessions) for a matching tab, by comparing window order and tab position, and recovers the original suspended URL from there. If no match is found for a given tab, it is reported as **not recovered** so you know to check it manually; matched tabs are still recreated in the correct group.
 
 :::note
-For related background on lost/disappearing tabs in general (not specific to Tab Groups), see [Recovering lost tabs](../tgs-recover-lost-tabs).
+For related background on lost/disappearing tabs in general (not specific to Tab Groups), see [Recovering lost tabs](../troubleshooting/tgs-recover-lost-tabs).
 :::
 
 ---

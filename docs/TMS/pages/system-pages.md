@@ -25,7 +25,7 @@ The page shown in place of every tab TMS suspends (`suspended.html`). It shows t
 
 ![A suspended tab in dark theme](./img/system-pages/01-suspended-page-dark.webp)
 
-If you see **"This site cannot be reached"** on what should be a suspended tab, see [My suspended tab says "This site cannot be reached"](../tgs-recover-lost-tabs#my-suspended-tab-says-this-site-cannot-be-reached).
+If you see **"This site cannot be reached"** on what should be a suspended tab, see [My suspended tab says "This site cannot be reached"](../troubleshooting/tgs-recover-lost-tabs#my-suspended-tab-says-this-site-cannot-be-reached).
 
 ## Update screens
 

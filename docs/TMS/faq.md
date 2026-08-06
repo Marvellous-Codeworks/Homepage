@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 title: "FAQ"
 description: Frequently Asked Questions about The Marvellous Suspender.
 hide_title: true
@@ -75,7 +75,7 @@ The fastest options:
 
 ### I lost tabs after a browser restart. Can I recover them?
 
-First check [Session Management → Recent sessions](./pages/session-management#recent-sessions), TMS automatically creates a restore point at browser start, so your tabs are very likely already there. If not, see the [guide for recovering lost tabs](./tgs-recover-lost-tabs) (archived from the original TGS project), the recovery steps still apply.
+First check [Session Management → Recent sessions](./pages/session-management#recent-sessions), TMS automatically creates a restore point at browser start, so your tabs are very likely already there. If not, see the [guide for recovering lost tabs](./troubleshooting/tgs-recover-lost-tabs) (archived from the original TGS project), the recovery steps still apply.
 
 If you lost tabs that were inside **Chrome Tab Groups** after a Chrome 149 update, see the [dedicated post on this bug](../../blog/tms-tab-groups-chrome-149-bug) and try the one-click repair on the [Tab Health](./pages/tab-health#broken-tab-groups-after-restart) page.
 
