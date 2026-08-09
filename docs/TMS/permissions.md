@@ -75,6 +75,10 @@ Used by the [Backup & Sync](./pages/backup-sync) feature to save session backup 
 
 Used exclusively by the optional [Google Drive backup destination](./pages/backup-sync#google-drive). It lets TMS obtain an OAuth token via `chrome.identity.getAuthToken()` to authenticate with your Google account. TMS never sees your Google password, the token exchange is handled entirely by Chrome. Chrome only asks you to grant this when you click **Connect** to link a Google account, not at install or update time.
 
+#### File URLs access
+
+*Added in 9.0.2.* Declared as an optional host permission (`file:///*`) so Chrome's **"Allow access to file URLs"** toggle appears on TMS's entry in `chrome://extensions` (it was previously missing entirely, since the manifest never declared this access). No access to local files is granted until you flip that toggle yourself, TMS never requests it automatically. Needed only if you want TMS to suspend/manage tabs opened from `file://` URLs.
+
 #### Google API OAuth scope: drive.appdata
 
 Declared in `manifest.json` under `oauth2.scopes`, this is not a Chrome permission but a Google API scope requested when you connect Google Drive. It grants access **only** to a hidden, app-specific folder (`appDataFolder`) that is invisible in the regular Google Drive UI and inaccessible to any other app. TMS cannot see, list, or touch any other file in your Drive. Because `drive.appdata` is a narrow, non-sensitive scope, connecting it does not require Google's OAuth verification process, any Google account can use it without restriction.

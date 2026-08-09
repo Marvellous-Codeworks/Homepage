@@ -52,6 +52,9 @@ Sync has a storage size limit. If your never-suspend list is very large, sync ma
 ### Enable news feed
 *Added in 9.0.1.* Enabled by default. Controls whether TMS periodically checks `marvellouscode.works` for TMS-related posts and shows them on the [News](./news-feed) page. Disable this to stop the background request entirely, no fetches happen and the **News** entry disappears from the sidebar on every page until you turn it back on.
 
+### Use the classic The Great Suspender artwork
+*Added in 9.0.2.* Disabled by default. Swaps TMS's current robot mascot/icon set back to the original The Great Suspender artwork app-wide: toolbar icon, suspended-tab favicon fallback, and every extension page's images and favicon. Illustrations with no legacy equivalent keep using the new artwork.
+
 ---
 
 ## Suspend
@@ -84,12 +87,17 @@ When TMS is updated or reloaded, it automatically takes ownership of any already
 When Chrome is about to discard a tab due to memory pressure, TMS intercepts the action and suspends the tab instead (preserving the URL on a TMS page). Discarded tabs are harder to recover than suspended ones.
 
 ### Never-suspend list
-A list of URL patterns that TMS will never suspend automatically, labeled on the page as "Never suspend tabs with URLs from the following list". One pattern per line. Supports:
+A list of URL patterns that TMS will never suspend automatically, labeled on the page as "Never suspend tabs with URLs from the following list". Referred to as the **allowlist** throughout the UI since 9.0.2 (this was a copy-only rename, the storage key and internal code are unchanged). One pattern per line. Supports:
 - Full URLs: `https://mail.google.com`
 - Domain patterns: `google.com` (matches all pages on that domain)
 - Regular expressions: `/^https:.*google\.com/`
 
-Use the **Test whitelist** link below the text area to check whether a given URL would be matched, and **Wake whitelisted tabs** to immediately unsuspend any currently-suspended tab in the window that matches an entry you just added.
+Use the test link below the text area to check whether a given URL would be matched, and **Wake matching tabs now** to immediately unsuspend any currently-suspended tab in the window that matches an entry you just added.
+
+### Always suspend list
+*Added in 9.0.2.* A second list, right next to the allowlist, labeled "Always suspend tabs with URLs from the following list". Tabs matching it always suspend after the normal timeout, bypassing the pinned/audible/unsaved-form-input protections that would otherwise keep them open indefinitely, useful for something like a background Twitch or YouTube tab left playing audio that you still want suspended on schedule. Manual per-tab pauses and global protections (offline, charging, "never suspend") are still respected, this only overrides the passive automatic ones.
+
+Same matching rules as the allowlist above (plain text or `/regex/`). Comes with its own **Suspend matching tabs now** button, mirroring the allowlist's wake button, to immediately suspend any open tab that matches an entry you just added instead of waiting for the normal timeout.
 
 ---
 

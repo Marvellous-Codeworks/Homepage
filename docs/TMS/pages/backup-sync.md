@@ -94,6 +94,9 @@ The **Disconnect** button revokes the OAuth token (`chrome.identity.removeCached
 #### If Drive authentication fails
 If a scheduled Drive backup fails because the connection expired or was revoked elsewhere, TMS shows a small red badge on the toolbar icon and a banner in the popup. Clicking the banner opens this page so you can reconnect.
 
+#### Connecting on Brave or Vivaldi
+*Fixed in 9.0.2.* Chrome's `chrome.identity.getAuthToken()` doesn't work on either browser: Brave attaches a custom URI scheme Google's backend rejects outright (a raw `Error 400: invalid_request` page), and Vivaldi disables Google sign-in entirely, so the connect flow used to hang with no feedback. TMS now falls back to `chrome.identity.launchWebAuthFlow()` on these browsers, racing the original method against a timeout so a Vivaldi-style hang surfaces as a failure instead of hanging forever, and remembers which method worked per install so later connections skip straight to it. Once connected, this page shows a quiet second line under the "TMS Backups" folder name naming which OAuth method is active for the install, mainly useful for support.
+
 #### Why a local file can still appear with Drive selected
 On browser shutdown, TMS writes an emergency local backup first regardless of your chosen destination, a Drive upload isn't reliable in that narrow shutdown window since the service worker can be killed mid-request. If your destination is Drive, that local file is queued and uploaded on the next startup, then automatically removed once the upload succeeds. Seeing a file appear locally even in Drive-only mode is expected behavior, not a bug, this is now explained directly on the page too, right below the multi-device rotation note.
 
@@ -115,9 +118,11 @@ Click **Restore from file**, pick a `tms-session-*.json` file (from this machine
 Shown only when Drive is connected. The dropdown lists every backup found in your Drive `appDataFolder`, grouped by device name (an `optgroup` per device, plus a "Legacy backups" group for files created before the multi-device format existed). Pick one and click **Import**, same outcome as the local flow: it lands in Saved sessions.
 
 ### Browsing/downloading raw Drive files
-A collapsible **Drive backup files** panel lists every backup on Drive with its date and size, numbered sequentially. Each row offers:
+A collapsible **Drive backup files** panel lists every backup on Drive, grouped by device when more than one machine backs up to the same account, with each file's date and size, numbered sequentially. Each row offers:
 - **Download**: saves the raw `.json` to your local Downloads folder without importing it
 - **Delete**: permanently removes that one backup file from Drive, after a confirmation prompt
+
+*Since 9.0.2*, each device group heading also has a **Delete all** button to remove every backup file for that device in one go, after a confirmation prompt listing the file count, instead of deleting them one by one.
 
 ![Expanded Drive backup files panel with a numbered row and Download/Delete buttons](./img/backup-sync/04-drive-files-panel.webp)
 
