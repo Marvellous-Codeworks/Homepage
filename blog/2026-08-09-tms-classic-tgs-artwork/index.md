@@ -4,7 +4,7 @@ title: "9.0.2 also brings back the classic The Great Suspender artwork, as an op
 description: "A new checkbox in Options → General lets you swap TMS's current mascot and icon set back to the original The Great Suspender artwork, app-wide."
 date: 2026-08-09T15:21:00+01:00
 authors: [gioxx]
-tags: [tms, release, announcement]
+tags: [tms, release, feature]
 ---
 
 The new mascot and icon set that shipped with TMS 9 has not landed well with everyone, [some of the feedback on 9.0.2 made that clear](/blog/tms-release-9-0-2#the-generative-image-backlash). While that discussion continues, 9.0.2 also ships a direct, no-strings-attached answer for anyone who just wants the old look back: a checkbox.

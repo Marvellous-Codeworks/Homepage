@@ -47,3 +47,8 @@ road-to-tms9:
   label: Road to TMS 9
   permalink: /road-to-tms9
   description: Articles about the evolution and journey towards The Marvellous Suspender 9
+
+feature:
+  label: Feature
+  permalink: /feature
+  description: New feature announcements
