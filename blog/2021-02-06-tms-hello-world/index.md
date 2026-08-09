@@ -46,6 +46,6 @@ I have no desire or intention to sell The Marvellous Suspender, neither today no
 
 Anyone can help out if they have the ability: the source code is [the one available on GitHub](https://github.com/gioxx/MarvellousSuspender) (the same that I then bring in the ZIP file that I upload to the Chrome Store) and the localization is taken care of through the [use of Crowdin](https://crowdin.com/project/tms).
 
-:::info 🇮🇹 In italian, please!  
+:::info[🇮🇹 In italian, please!]
 Ti ricordo che l'articolo originale è stato pubblicato - in italiano - sul mio blog, all'indirizzo [gioxx.org/2021/02/06/the-marvellous-suspender-hello-world](https://gioxx.org/2021/02/06/the-marvellous-suspender-hello-world)
 :::

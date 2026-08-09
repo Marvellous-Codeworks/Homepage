@@ -41,6 +41,6 @@ Do you think you can do something to allow the project to survive? **Then I'm lo
 
 I really hope you will want to help me in some way, even if only by sharing this post and talking about it with capable and well-intentioned people who could make the difference :-)
 
-:::info 🇮🇹 In italian, please!  
+:::info[🇮🇹 In italian, please!]
 Ti ricordo che l'articolo originale è stato pubblicato - in italiano - sul mio blog, all'indirizzo [gioxx.org/2022/10/18/the-marvellous-suspender-a-look-into-the-future](https://gioxx.org/2022/10/18/the-marvellous-suspender-a-look-into-the-future/)
 :::

@@ -55,6 +55,6 @@ The current limit for how many tabs the new version of TMS can actively manage a
 
 Thanks a ton to everyone willing to test, break things, and share thoughts, this kind of support is what keeps open source alive and kicking.
 
-:::info 🇮🇹 In italian, please!  
+:::info[🇮🇹 In italian, please!]
 Ti ricordo che l'articolo originale è stato pubblicato - in italiano - sul mio blog, all'indirizzo [gioxx.org/2025/06/24/the-marvellous-suspender-v3-beta](https://gioxx.org/2025/06/24/the-marvellous-suspender-v3-beta/)
 :::

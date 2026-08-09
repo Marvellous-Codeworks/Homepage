@@ -30,6 +30,6 @@ In the meantime, I will not remove the extension from the Google store, I will l
 
 Thank you from the bottom of my heart, everyone.
 
-:::info 🇮🇹 In italian, please!  
+:::info[🇮🇹 In italian, please!]
 Ti ricordo che l'articolo originale è stato pubblicato - in italiano - sul mio blog, all'indirizzo [gioxx.org/2024/06/24/the-marvellous-suspender-the-last-dance](https://gioxx.org/2024/06/24/the-marvellous-suspender-the-last-dance/)
 :::
