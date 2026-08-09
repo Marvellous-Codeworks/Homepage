@@ -71,7 +71,7 @@ The post already exists, [the 9.0 permissions FAQ](/blog/tms9-public-permissions
 ### The generative-image backlash
 The new suspended-tab illustration set uses AI-generated art, and the reaction has been unambiguous and consistent, from a 1-star review (*"So now I am forced to see garbage genAI images on every suspended tab?"*), to a Chinese-language review calling the new icon 丑爆了 (bluntly, "hideously ugly"), to a calm, direct email from a long-time user asking us to either revert to the old artwork or commission an actual illustrator, because shipping AI art "will make it appear cheap and rushed to the users who don't see all the code and scripts you designed for it". That last framing is the one worth sitting with: it's not really about the pixels, it's about what the choice signals for a project that otherwise puts real engineering effort into every release. This is going back into discussion, no decision made here, but the signal is too consistent across independent channels to wave off as noise.
 
-:::tip Can you draw better than an AI?
+:::tip[Can you draw better than an AI?]
 If you're reading this and use Photoshop (or any other graphics program, it doesn't matter) every day for a living, why not give us a hand? Neither of us is an illustrator, but we needed to give TMS's graphics a fresh look, so we set out to design a mascot that would be visually appealing. We worked on it with the help of AI and came up with a result we hoped you'd like.
 
 If you think you can do better, please contact us! Send an email to [gioxx@marvellouscode.works](mailto:gioxx@marvellouscode.works) and let's talk about it :-)
