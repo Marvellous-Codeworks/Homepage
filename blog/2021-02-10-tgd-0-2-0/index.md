@@ -8,6 +8,8 @@ tags: [news, tgd]
 
 The Great-er Tab Discarder (TGD) starts here: a clean fork of the original The Great Discarder, stripped of tracking and built for people who just want their RAM back.
 
+{/* truncate */}
+
 ## What's in this release
 
 - **Discard at startup**: a new option to automatically discard tabs when the browser launches, freeing memory from the first moment Chrome opens

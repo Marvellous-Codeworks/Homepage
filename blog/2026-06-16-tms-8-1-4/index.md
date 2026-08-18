@@ -8,6 +8,8 @@ tags: [release, tms]
 
 A targeted fix release addressing the tab group restore regression introduced by Chrome 149, where suspended tabs inside tab groups were silently discarded after a browser restart.
 
+{/* truncate */}
+
 ## What's fixed
 
 ### Suspended tabs inside tab groups restored correctly after restart

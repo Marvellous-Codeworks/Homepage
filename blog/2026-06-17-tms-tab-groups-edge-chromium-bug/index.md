@@ -11,6 +11,8 @@ If you are using **Microsoft Edge** and noticed that your suspended tabs inside 
 
 <img src="/img/suspendy-guy-oops.webp" alt="Suspendy Guy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
 
+{/* truncate */}
+
 ## What happened
 
 Microsoft Edge is built on the Chromium engine, which means it inherits browser-level changes from the upstream Chromium project, including regressions. The change introduced around Chromium 149 that broke the tab group restore behavior for suspended tabs is now making its way into Edge builds.

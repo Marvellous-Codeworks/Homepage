@@ -22,6 +22,8 @@ I didn’t think I would ever write such an article, yet here we are. I want to 
   <figcaption>Photo credit: <a href="https://unsplash.com/@wilhelmgunkel?utm_source=Stockpack&utm_medium=referral&utm_campaign=api-credit">Wilhelm Gunkel</a></figcaption>
 </figure>
 
+{/* truncate */}
+
 ## Who?
 
 Giovanni, 35 years old, Italian, System Administrator by trade, curious about the world of development (experimenter in the very little spare time available), all-round passionate about technology, lover of the Open Source world, always engaged with Mozilla Italy in localization and product promotion, I have travelled around the world and met many beautiful people as passionate as I am.

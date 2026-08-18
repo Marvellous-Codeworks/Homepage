@@ -9,6 +9,8 @@ tags: [tms,road-to-tms9]
 
 TMS 9 is shaping up to be one of the most significant releases in the extension's history, if you have been following along, you already know about the automatic session backups and the Google Drive integration we covered in the previous posts. But not all of the work that goes into a release shows up in the changelog. Some of the most important changes happen completely out of sight, and this one is a good example of that. We replaced two third-party libraries that had been silently aging inside the extension, and we want to be transparent about what changed and why.
 
+{/* truncate */}
+
 ## What is a "third-party library" and why should you care?
 
 TMS is not written from scratch. Like most software, it relies on a handful of external libraries, small pieces of code written by other developers that handle specific tasks so we do not have to reinvent the wheel. These libraries live inside the extension you install, and their health matters: an abandoned library means bugs get no fixes, known vulnerabilities go unpatched, and compatibility with future browser versions is not guaranteed.

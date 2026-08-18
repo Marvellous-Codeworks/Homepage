@@ -8,6 +8,8 @@ tags: [release, tgd]
 
 A polished release focused on the suspended-tab experience: favicon dimming, flexible restore options, popup improvements, and automatic options saving, plus a fix for suspended tabs that Chrome was blocking on direct load.
 
+{/* truncate */}
+
 ## What's changed
 
 ### Suspended tab options

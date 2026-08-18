@@ -8,6 +8,8 @@ tags: [release, tms]
 
 A focused patch release that fixes the annoying "new version available" banner showing up repeatedly even after TMS was already up to date.
 
+{/* truncate */}
+
 ## What's fixed
 
 ### Update banner false positives

@@ -15,6 +15,8 @@ import heroBanner from './2022-10-18-the-marvellous-suspender-a-look-into-the-fu
 
 2021 was a great year for [The Marvellous Suspender](https://gioxx.org/chromeaddons/the-marvellous-suspender/). Lots of contributions, ideas, bugfixes and even a not-so-healthy dose of Google updates that have put the add-on and all its users in a difficult spot. Today's article, however, is perhaps conclusive unless we find new blood in development and a new starting point to rethink the add-on and bring it into the future, the one necessarily dictated by Google and its [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/).
 
+{/* truncate */}
+
 ## January 2024
 
 It is the month set by Google for the removal of all add-ons that make use of Manifest V2, just as reported in the official documentation available at [developer.chrome.com/docs/extensions/mv3/mv2-sunset](https://developer.chrome.com/docs/extensions/mv3/mv2-sunset/).

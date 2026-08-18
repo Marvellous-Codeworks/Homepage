@@ -9,7 +9,7 @@ tags: [bug, news, tms, announcement]
 
 :::info
 **2026-06-12**
-- A companion extension, [back-grouped-tabs](https://github.com/Marvellous-Codeworks/back-grouped-tabs), is now available as a temporary workaround while a proper fix for the Chrome bug is being developed. See the [new section below](#companion-workaround-back-grouped-tabs) for details.
+- A companion extension, [back-grouped-tabs](https://github.com/Marvellous-Codeworks/back-grouped-tabs), is now available as a temporary workaround while a proper fix for the Chrome bug is being developed. See the [companion workaround section](/blog/tms-tab-groups-chrome-149-bug#companion-workaround-back-grouped-tabs) for details.
 
 **2026-06-15**
 - **TMS 8.1.4** has been submitted to the Chrome Web Store and is currently **pending review**. This version includes a fix for the tab group restore issue.
@@ -23,6 +23,8 @@ tags: [bug, news, tms, announcement]
 If you are using Chrome 149 and noticed that your suspended tabs inside **tab groups** turn into blank New Tab pages after a browser restart, you are not alone, and it is not your fault.
 
 <img src="/img/suspendy-guy-oops.webp" alt="Suspendy Guy is not happy about this" style={{float: 'right', margin: '0 0 1rem 1.5rem', width: '180px'}} />
+
+{/* truncate */}
 
 ## What happened
 

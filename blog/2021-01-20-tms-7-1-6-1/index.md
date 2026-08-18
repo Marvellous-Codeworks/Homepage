@@ -12,6 +12,8 @@ This initial release is a foundation build: the core suspension logic is intact,
 
 If you were a Great Suspender user, you can install TMS and import your previous settings and session data from the History page.
 
+{/* truncate */}
+
 ## What's in this release
 
 - Core tab suspension and unsuspension logic carried over from The Great Suspender

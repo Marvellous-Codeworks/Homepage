@@ -8,6 +8,8 @@ tags: [release, tgd]
 
 Three things at once: a new name with a small but meaningful tweak, automatic dark mode support, and a feature for users coming over from The Marvellous Suspender or The Great Suspender (notrack), TGD can now migrate their suspended tabs directly.
 
+{/* truncate */}
+
 ## What's changed
 
 ### Migrate suspended tabs from other extensions

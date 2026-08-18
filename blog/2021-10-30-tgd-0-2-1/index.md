@@ -8,6 +8,8 @@ tags: [release, tgd]
 
 A round of quality-of-life improvements and cleanup: a new bulk-discard command, cleaner options layout, and a leaner codebase.
 
+{/* truncate */}
+
 ## What's changed
 
 - **New popup command** to discard all eligible tabs based on current options (no force, respects whitelist and other settings)

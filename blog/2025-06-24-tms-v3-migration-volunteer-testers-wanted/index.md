@@ -21,6 +21,8 @@ The post has been updated! (2025-07-05)
 Had I lost hope? I'll admit it, yeah, pretty much completely.
 So you can imagine how thrilled I was when I finally saw a light at the end of that tunnel.
 
+{/* truncate */}
+
 [Rob](https://github.com/rkodey/) is the guy behind [The Great-_er_ Tab Discarder](https://github.com/rkodey/the-great-er-discarder-er), itself a fork of an older, seemingly abandoned project, another extension born out of the need to fix a gap that often makes Chrome unusable in the long run (especially when you're juggling hundreds of open tabs).
 When Rob took an interest in TMS and decided to take on the challenge of making it compatible with the more limited Manifest V3, I saw an opportunity. I reached out to him, and together with a third person from Google, we kicked off a group chat to start connecting the dots and try to make the leap.
 
