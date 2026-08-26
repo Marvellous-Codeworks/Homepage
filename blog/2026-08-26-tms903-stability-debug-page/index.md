@@ -11,7 +11,7 @@ TMS's debug page has an optional **captureLogs** toggle for exactly one purpose:
 
 A few days ago, while stress-testing 9.0.3 in development with dozens of suspended tabs open and `captureLogs` enabled, the opposite happened: the extension itself crashed, memory exhausted, requiring a full reload to recover. That is not an acceptable outcome for a tool whose entire job is to run quietly in the background and get out of the way, let alone for an extension whose whole purpose is to lighten Chrome's memory load in the first place. What follows is the real, unedited shape of tracking that down: a first round of fixes that were genuinely necessary and genuinely not enough, followed by the investigation that found what actually needed fixing.
 
-:::tip TL;DR
+:::tip[TL;DR]
 - Stress-testing 9.0.3 in development, with lots of suspended tabs and TMS's `captureLogs` debug option on, hit a real out-of-memory crash.
 - We fixed several genuine bugs in the log buffer and debug page (PR #472), and the crash kept happening anyway.
 - The actual cause: TMS's log storage was quietly sending a copy of itself to *every open suspended tab* every time it was written, and none of those copies ever got cleaned up. The more you logged, the faster it filled up your memory, regardless of how many tabs you had open.
