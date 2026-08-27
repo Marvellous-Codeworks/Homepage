@@ -32,7 +32,7 @@ Testing is entirely optional and always welcome, more real-world runs on a fix b
 2. In Chrome (or Brave/Vivaldi/Edge), go to `chrome://extensions/` and enable **Developer mode**.
 3. Click **Load unpacked extension…** and browse to the extracted folder's `src` directory.
 
-This replaces your current installation. See [Install from source](../install-from-source) for more detail on this general mechanic if anything looks unfamiliar.
+This replaces your current installation. See [Install from source](../tms-install-from-source) for more detail on this general mechanic if anything looks unfamiliar.
 
 :::note
 Test builds usually keep the same version number as the last real release, a test build isn't a new release on its own, just that fix layered on top for testing purposes. That's expected, not a sign something didn't install.
