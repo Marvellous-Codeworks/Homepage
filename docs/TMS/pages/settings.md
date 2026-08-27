@@ -62,8 +62,14 @@ Sync has a storage size limit. If your never-suspend list is very large, sync ma
 ### Suspend automatically after
 How long a tab must be inactive before TMS suspends it. Options range from 20 seconds to 2 weeks. Set to **Never** to disable automatic suspension.
 
+### Suspend tabs on battery power after
+*Added in 9.0.3.* Defaults to **Same as when plugged in** (no override). Lets you suspend tabs more aggressively while running on battery than your normal AC timeout, without changing that AC timeout. Only takes effect while the device is actually unplugged; ignored while charging.
+
 ### Don't suspend pinned tabs
 Pinned tabs are excluded from automatic suspension.
+
+### Don't suspend tabs opened in app windows
+*Added in 9.0.3.* Enabled by default. Covers both a page opened via Chrome's **Create Shortcut → Open as window** (or the browser menu's **Install page as App**) and an installed PWA (**Install `<site>`** from the address bar), each opening in its own dedicated window rather than a normal tab. Deliberately does not extend to ordinary popup windows a site opens itself. A manual "suspend this tab now" still works regardless, only automatic suspension respects this setting.
 
 ### Don't suspend tabs with unsaved form data
 TMS detects whether a tab contains an active form with unsaved input and skips it. Useful for forms that don't auto-save.
@@ -123,3 +129,12 @@ Controls whether TMS takes a screenshot of the page before suspending it, which 
 
 ### Force screen capture even for tabs with restricted content
 By default, TMS skips screen capture for pages that block it (e.g., via CSP or Chrome's internal pages). Enable this to attempt capture anyway. Note: some pages will still produce a blank image.
+
+### Preserve YouTube playback position when suspending
+Saves your current playback timestamp before suspending a YouTube tab and resumes from there on unsuspend, instead of restarting the video from the beginning.
+
+### Always reopen suspended tabs scrolled to the top
+*Added in 9.0.3.* Disabled by default. Skips restoring the saved scroll position on unsuspend, the tab always reopens at the top of the page instead. Applies to both automatic and manual suspension, and overrides any `#section` link anchor in the URL.
+
+### Reload also unsuspends tabs in the background
+*Added in 9.0.3.* Disabled by default. Normally, reloading a suspended tab only counts as an explicit "unsuspend" request when that tab is the one currently focused. Enable this to also recognize a reload on a suspended tab you're not currently looking at (e.g. via a multi-tab selection, or right-click → Reload on an inactive tab) as an unsuspend request.

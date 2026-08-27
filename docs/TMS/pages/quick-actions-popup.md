@@ -32,6 +32,7 @@ At the top of the popup, TMS shows the current tab's status and, for several sta
 | Paused | You manually paused this tab | **Unpause** |
 | No connectivity | Browser is offline and **Only suspend when connected** is enabled | - |
 | Charging | Device is on power and **Only suspend when on battery** is enabled | - |
+| App window | *Added in 9.0.3.* Tab is open in an [app-mode window](./settings#dont-suspend-tabs-opened-in-app-windows) and excluded from auto-suspend | - |
 | Local file blocked | TMS lacks permission to read this local file | **Grant permission** → opens the [file permissions prompt](#local-file-permissions) |
 
 If a scheduled Google Drive backup recently failed, a red banner appears above the menu, click it to jump straight to [Backup & Sync](./backup-sync) and reconnect.
@@ -96,6 +97,8 @@ If **Enable context menu** is on in [Settings → General](./settings#enable-con
 |---|---|
 | **Open link in a suspended tab** | Right-click a hyperlink on any page to open it directly in a new, already-suspended tab, without ever loading it live |
 | **Toggle pause suspension** | Equivalent to the popup's Pause/Unpause action, available as a direct one-click toggle |
+| **Suspend all tabs in this group** | *Added in 9.0.3.* Suspends every tab sharing the right-clicked tab's group. Available both in the page context menu and by right-clicking a tab in the tab strip; no-op on an ungrouped tab |
+| **Unsuspend all tabs in this group** | *Added in 9.0.3.* Unsuspends every tab sharing the right-clicked tab's group. Same availability and no-op behavior as above |
 
 ![Right-click context menu on a tab, showing the TMS submenu](./img/quick-actions-popup/05-context-menu.webp)
 

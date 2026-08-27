@@ -27,6 +27,8 @@ TMS ships with one pre-assigned shortcut. All other commands have no default key
 | Pause current tab | - | Toggle the "paused" state for the current tab (excluded from auto-suspend until next reload) |
 | Suspend selected tabs | - | Suspend all tabs currently selected in the tab strip |
 | Unsuspend selected tabs | - | Unsuspend all tabs currently selected in the tab strip |
+| Suspend tab group | - | *Added in 9.0.3.* Suspend every tab sharing the active tab's group. No-op on an ungrouped tab |
+| Unsuspend tab group | - | *Added in 9.0.3.* Unsuspend every tab sharing the active tab's group. No-op on an ungrouped tab |
 | Soft suspend active window | - | Suspend all inactive tabs in the current window |
 | Force suspend active window | - | Suspend all tabs in the current window, including the active one |
 | Unsuspend active window | - | Unsuspend all tabs in the current window |
